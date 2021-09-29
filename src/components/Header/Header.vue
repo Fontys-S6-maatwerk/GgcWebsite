@@ -5,7 +5,7 @@
                 <div class="menu-group flex align-center">
                     <div class="logo mr-100">
                         <router-link to="/">
-                            <img src="../assets/images/Logo_GGC.png" alt="Global Goals Community">
+                            <img src="../../assets/images/Logo_GGC.png" alt="Global Goals Community">
                         </router-link>
                     </div>
 
@@ -52,7 +52,9 @@
 </template>
 
 <script lang="ts">
-import MenuItem from '@/components/MenuItem.vue'
+import MenuItem from './MenuItem.vue'
+import '@/assets/images/Logo_GGC.png'
+
 export default {
   components: {
     MenuItem
