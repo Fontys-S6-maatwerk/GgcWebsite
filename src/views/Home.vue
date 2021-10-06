@@ -6,9 +6,9 @@
       >
         <img
           class="circles circles-header-home-left ls-is-cached lazyloaded"
-          data-src="/public/assets/circles/circles.png"
+          :data-src="images.circles.default"
           alt
-          src="/public/assets/circles/circles.png"
+          :src="images.circles.default"
         />
 
         <div class="container">
@@ -60,8 +60,7 @@
                         <path
                           fill="currentColor"
                           d="M432 96c26.5 0 48-21.5 48-48S458.5 0 432 0s-48 21.5-48 48 21.5 48 48 48zm28.8 153.6c5.8 4.3 12.5 6.4 19.2 6.4 9.7 0 19.3-4.4 25.6-12.8 10.6-14.1 7.8-34.2-6.4-44.8l-111.4-83.5c-13.8-10.3-29.1-18.4-45.4-23.8l-63.7-21.2-26.1-52.1C244.7 2 225.5-4.4 209.7 3.5c-15.8 7.9-22.2 27.1-14.3 42.9l29.1 58.1c5.7 11.4 15.6 19.9 27.7 24l16.4 5.5-41.2 20.6c-21.8 10.9-35.4 32.8-35.4 57.2v53.1l-74.1 24.7c-16.8 5.6-25.8 23.7-20.2 40.5 1.7 5.2 4.9 9.4 8.7 12.9l-38.7-14.1c-9.7-3.5-17.4-10.6-21.8-20-5.6-12-19.9-17.2-31.9-11.6s-17.2 19.9-11.6 31.9c9.8 21 27.1 36.9 48.9 44.8l364.8 132.7c9.7 3.5 19.7 5.3 29.7 5.3 12.5 0 24.9-2.7 36.5-8.2 12-5.6 17.2-19.9 11.6-31.9S474 454.7 462 460.3c-9.3 4.4-19.8 4.8-29.5 1.3l-90.8-33.1c8.7-4.1 15.6-11.8 17.8-21.9l21.9-102c3.9-18.2-3.2-37.2-18.1-48.4l-52-39 66-30.5 83.5 62.9zm-144.4 51.7l-19.7 92c-1.5 7.1-.1 13.9 2.8 20l-169.4-61.6c2.7-.2 5.4-.4 8-1.3l85-28.4c19.6-6.5 32.8-24.8 32.8-45.5V256l60.5 45.3z"
-                        />
-                        78 actieve gebruikers
+                        />78 actieve gebruikers
                       </div>
                     </div>
                   </div>
@@ -72,15 +71,11 @@
                 <div class="flex justify-center">
                   <div
                     class="community-image border-radius box-shadow background-size-cover background-position-center position-relative mt-xs-20 mt-lg-60"
-                    style="
-                      background-image: url('/public/assets/community-group.png');
-                    "
+                    :style="{backgroundImage: 'url('+images.communityGroup+')'}"
                   >
                     <div
                       class="community-user-top position-absolute circle-lg circle-border-md box-shadow flex align-center justify-center background-position-center background-size-cover"
-                      style="
-                        background-image: url('/public/assets/profile/22.jpg');
-                      "
+                      :style="{backgroundImage: 'url('+images.profile.p22+')'}"
                     ></div>
 
                     <div
@@ -89,9 +84,7 @@
 
                     <div
                       class="community-user-bottom position-absolute circle-lg circle-border-md box-shadow flex align-center justify-center background-position-center background-size-cover"
-                      style="
-                        background-image: url('/public/assets/profile/15.png');
-                      "
+                      :style="{backgroundImage: 'url('+images.profile.p15+')'}"
                     ></div>
 
                     <div
@@ -183,9 +176,9 @@
                 <div class="offset-lg-1 col-lg-5">
                   <img
                     class="ggc-image box-shadow border-radius lazyloaded"
-                    data-src="/public/assets/impressie-def-ontwerp.jpg"
+                    :data-src="impressionDesign"
                     alt="Global Goals Community Ecodorp schetsen"
-                    src="/public/assets/impressie-def-ontwerp.jpg"
+                    :src="images.impressionDesign"
                   />
                 </div>
               </div>
@@ -196,9 +189,9 @@
         <div class="home-content background-offwhite py-md-40 py-100">
           <img
             class="circles circles-featured-home-right rotate-70 ls-is-cached lazyloaded"
-            data-src="/public/assets/circles/circles.png"
+            :data-src="images.circles.default"
             alt
-            src="/public/assets/circles/circles.png"
+            :src="images.circles.default"
           />
 
           <div class="container">
@@ -222,7 +215,10 @@
 
               <div class="row mt-md-40 mt-60">
                 <div class="col-xl-3 col-md-6">
-                  <router-link to="/creation/31/31-blog-belonging-to-the-future/" class="card mb-lg-20">
+                  <router-link
+                    to="/creation/31/31-blog-belonging-to-the-future/"
+                    class="card mb-lg-20"
+                  >
                     <div
                       class="card-image position-relative callout lazyloaded"
                       data-bgset="/public/assets/content/header/31-header.jpg"
@@ -480,7 +476,7 @@
             <div class="col-md-5">
               <div
                 class="quote-image border-radius-left background-position-center background-size-cover"
-                style="background-image: url('/public/assets/profile/21.jpg')"
+                :style="{backgroundImage: 'url('+images.profile.p21+')'}"
               ></div>
             </div>
 
@@ -506,15 +502,15 @@
       <div class="home-content background-offwhite py-md-40 py-100">
         <img
           class="circles circles-populair-home-left lazyloaded"
-          data-src="/public/assets/circles/circles-2x.png"
+          :data-src="images.circles.circles2x"
           alt
-          src="/public/assets/circles/circles-2x.png"
+          :src="images.circles.circles2x"
         />
         <img
           class="circles circles-populair-home-right ls-is-cached lazyloaded"
-          data-src="/public/assets/circles/circles.png"
+          :data-src="images.circles.default"
           alt
-          src="/public/assets/circles/circles.png"
+          :src="images.circles.default"
         />
 
         <div class="container">
@@ -919,10 +915,10 @@
       </div>
 
       <div class="home-content background-offwhite py-md-40 py-100">
-        <img class="circles circles-recent-home-left" src="/public/assets/circles/circles.png" />
+        <img class="circles circles-recent-home-left" :src="images.circles.default" />
         <img
           class="circles circles-recent-home-right rotate-80"
-          src="/public/assets/circles/circles.png"
+          :src="images.circles.default"
         />
 
         <div class="container">
@@ -1025,7 +1021,10 @@
                 </router-link>
               </div>
               <div class="col-xl-3 col-md-6">
-                <router-link to="/creation/82/82-how-to-make-your-own-herb-spiral/" class="card mb-lg-20">
+                <router-link
+                  to="/creation/82/82-how-to-make-your-own-herb-spiral/"
+                  class="card mb-lg-20"
+                >
                   <div
                     class="card-image position-relative callout lazyloaded"
                     data-bgset="public/assets/content/header/82-header.png"
@@ -1280,9 +1279,35 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import communityGroupImage from '@/assets/images/community-group.png'
+import profile15Image from '@/assets/images/profile/15.png'
+import profile21Image from '@/assets/images/profile/21.jpg'
+import profile22Image from '@/assets/images/profile/22.jpg'
+import impressionDesignImage from '@/assets/images/impressie-def-ontwerp.jpg'
+import circlesImage from '@/assets/images/circles/circles.png'
+import circles2xImage from '@/assets/images/circles/circles-2x.png'
+import circlesTransparentImage from '@/assets/images/circles/circles-transparent.png'
 
 @Component({
-  components: {}
+  components: {},
+  data: function () {
+    return {
+      images: {
+        circles: {
+          default: circlesImage,
+          circles2x: circles2xImage,
+          transparent: circlesTransparentImage
+        },
+        profile: {
+          p15: profile15Image,
+          p21: profile21Image,
+          p22: profile22Image
+        },
+        communityGroup: communityGroupImage,
+        impressionDesign: impressionDesignImage
+      }
+    }
+  }
 })
 export default class Home extends Vue {}
 </script>
