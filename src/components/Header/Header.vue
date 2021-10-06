@@ -65,7 +65,7 @@ export default {
     }
   },
   methods: {
-    toggleMenu: function () {
+    toggleMenu: function (): void {
       this.isMenuOpen = !this.isMenuOpen
     }
   }
@@ -174,6 +174,7 @@ header .container .content .toggle #times {
 
 header .container .content .menu-desktop {
   display: none;
+  align-items: center;
 }
 
 header .menu-mobile {
@@ -197,7 +198,7 @@ header .menu-mobile .menu-items {
 
 @media (min-width: 1200px) {
   header .container .content .menu-desktop {
-    display: inherit;
+    display: flex;
   }
 
   header .menu-mobile {
