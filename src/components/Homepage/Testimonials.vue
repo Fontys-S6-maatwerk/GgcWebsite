@@ -3,10 +3,11 @@
     <div class="container quote">
       <div class="row no-gutters">
         <div class="col-md-5">
-          <div
+          <img
             class="quote-image border-radius-left background-position-center background-size-cover"
-            :style="{backgroundImage: 'url('+images.profile.p21+')'}"
-          ></div>
+            src="../../assets/images/profile/21.jpg"
+            style="object-fit: cover; width: 100%"
+          />
         </div>
 
         <div class="col-md-7">
@@ -31,19 +32,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import profile21Image from '@/assets/images/profile/21.jpg'
 
-@Component({
-  data: function () {
-    return {
-      images: {
-        profile: {
-          p21: profile21Image
-        }
-      }
-    }
-  }
-})
+@Component({})
 export default class Testimonials extends Vue {}
 </script>
 

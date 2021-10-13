@@ -52,24 +52,26 @@
 </template>
 
 <script lang="ts">
+import { Vue } from 'vue-property-decorator'
 import MenuItem from './MenuItem.vue'
 import '@/assets/images/Logo_GGC.png'
 
-export default {
+export default Vue.extend({
+  name: 'Header',
   components: {
     MenuItem
   },
-  data (): Record<string, unknown> {
+  data () {
     return {
-      isMenuOpen: false
+      isMenuOpen: false as boolean
     }
   },
   methods: {
-    toggleMenu: function (): void {
+    toggleMenu (): void {
       this.isMenuOpen = !this.isMenuOpen
     }
   }
-}
+})
 </script>
 
 <style lang="css" scoped>

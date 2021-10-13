@@ -2,15 +2,15 @@
   <div class="home-content background-offwhite py-md-40 py-100">
     <img
       class="circles circles-populair-home-left lazyloaded"
-      :data-src="images.circles2x"
+      data-src="../../assets/images/circles/circles-2x.png"
       alt
-      :src="images.circles2x"
+      src="../../assets/images/circles/circles-2x.png"
     />
     <img
       class="circles circles-populair-home-right ls-is-cached lazyloaded"
-      :data-src="images.circles"
+      data-src="../../assets/images/circles/circles.png"
       alt
-      :src="images.circles"
+      src="../../assets/images/circles/circles.png"
     />
 
     <div class="container">
@@ -180,7 +180,7 @@
 
                 <div class="sdgs">
                   <span class="label sdg-two">2.</span>
-                  <span class="label sdg-twelf">12.</span>
+                  <span class="label sdg-twelve">12.</span>
                 </div>
 
                 <hr />
@@ -263,7 +263,7 @@
                 </div>
 
                 <div class="sdgs">
-                  <span class="label sdg-twelf">12.</span>
+                  <span class="label sdg-twelve">12.</span>
                   <span class="label sdg-fifteen">15.</span>
                 </div>
 
@@ -371,19 +371,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import circlesImage from '@/assets/images/circles/circles.png'
-import circles2xImage from '@/assets/images/circles/circles-2x.png'
 
-@Component({
-  data: function () {
-    return {
-      images: {
-        circles: circlesImage,
-        circles2x: circles2xImage
-      }
-    }
-  }
-})
+@Component({})
 export default class PopularSolutions extends Vue {}
 </script>
 

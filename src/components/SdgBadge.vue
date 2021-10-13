@@ -15,7 +15,7 @@ import SdgColors from '@/data/SdgColors'
   },
   computed: {
     color: function () {
-      return SdgColors[this.number - 1]
+      return SdgColors[this.$props.number - 1]
     }
   }
 })

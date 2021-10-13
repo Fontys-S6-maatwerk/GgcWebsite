@@ -47,9 +47,9 @@
           <div class="offset-lg-1 col-lg-5">
             <img
               class="ggc-image box-shadow border-radius lazyloaded"
-              :data-src="images.impressionDesign"
+              data-src="../../assets/images/impressie-def-ontwerp.jpg"
               alt="Global Goals Community Ecodorp schetsen"
-              :src="images.impressionDesign"
+              src="../../assets/images/impressie-def-ontwerp.jpg"
             />
           </div>
         </div>
@@ -60,17 +60,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import impressionDesignImage from '@/assets/images/impressie-def-ontwerp.jpg'
 
 @Component({
-  components: {},
-  data: function () {
-    return {
-      images: {
-        impressionDesign: impressionDesignImage
-      }
-    }
-  }
+  components: {}
 })
 export default class AboutGoals extends Vue {}
 </script>

@@ -5,34 +5,22 @@
         <div class="left">
           <strong>Partners van</strong>
 
-          <div
-            class="image-ggc background-size-contain background-no-repeat mt-15"
-            :style="{backgroundImage: 'url('+images.ggcLogo+')'}"
-          ></div>
+          <div class="image-ggc ggc-logo background-size-contain background-no-repeat mt-15"></div>
         </div>
 
         <div class="right flex">
           <router-link to="https://www.ecodorpennetwerk.nl/" target="_blank" class="ml-15">
-            <div
-              class="logo-partner background-position-center background-size-contain background-no-repeat"
-              :style="{backgroundImage: 'url('+images.genLogo+')'}"
-            ></div>
+            <div class="logo-partner gen-logo background-position-center background-size-contain background-no-repeat"></div>
           </router-link>
           <router-link to="https://www.ecodorpboekel.nl/" target="_blank" class="ml-15">
-            <div
-              class="logo-partner background-position-center background-size-contain background-no-repeat"
-              :style="{backgroundImage: 'url('+images.ecodorpBoekelLogo+')'}"
-            ></div>
+            <div class="logo-partner ecodorp-boekel-logo background-position-center background-size-contain background-no-repeat"></div>
           </router-link>
           <router-link
             to="https://fontys.nl/Over-Fontys/Fontys-Hogeschool-ICT.htm"
             target="_blank"
             class="ml-15"
           >
-            <div
-              class="logo-partner background-position-center background-size-contain background-no-repeat"
-              :style="{backgroundImage: 'url('+images.fontysLogo+')'}"
-            ></div>
+            <div class="logo-partner fontys-logo background-position-center background-size-contain background-no-repeat"></div>
           </router-link>
         </div>
       </div>
@@ -42,25 +30,22 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import ggcLogoImage from '@/assets/images/Logo_GGC.png'
-import genLogoImage from '@/assets/images/partners/gen_nederland.png'
-import ecodorpBoekelLogoImage from '@/assets/images/partners/ecodorp_boekel.png'
-import fontysLogoImage from '@/assets/images/partners/fontys_hogeschool_ict.png'
 
-@Component({
-  data: function () {
-    return {
-      images: {
-        ggcLogo: ggcLogoImage,
-        genLogo: genLogoImage,
-        ecodorpBoekelLogo: ecodorpBoekelLogoImage,
-        fontysLogo: fontysLogoImage
-      }
-    }
-  }
-})
+@Component({})
 export default class Partners extends Vue {}
 </script>
 
 <style>
+.ggc-logo {
+  background-image: url(../../assets/images/Logo_GGC.png);
+}
+.gen-logo {
+  background-image: url(../../assets/images/partners/gen_nederland.png);
+}
+.ecodorp-boekel-logo {
+  background-image: url(../../assets/images/partners/ecodorp_boekel.png);
+}
+.fontys-logo {
+  background-image: url(../../assets/images/partners/fontys_hogeschool_ict.png);
+}
 </style>
