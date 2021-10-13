@@ -2,9 +2,9 @@
   <div class="home-content background-offwhite py-md-40 py-100">
     <img
       class="circles circles-featured-home-right rotate-70 ls-is-cached lazyloaded"
-      :data-src="images.circles"
+      data-src="../../assets/images/circles/circles.png"
       alt
-      :src="images.circles"
+      src="../../assets/images/circles/circles.png"
     />
 
     <div class="container">
@@ -282,18 +282,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import circlesImage from '@/assets/images/circles/circles.png'
 
-@Component({
-  components: {},
-  data: function () {
-    return {
-      images: {
-        circles: circlesImage
-      }
-    }
-  }
-})
+@Component({})
 export default class HighlightedSolutions extends Vue {}
 </script>
 

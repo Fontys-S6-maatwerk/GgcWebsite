@@ -97,7 +97,7 @@ import moment from 'moment'
   },
   computed: {
     exerpt: function () {
-      return this.solution.content.replace(/(<([^>]+)>)/ig, '').substring(0, 200)
+      return this.$props.solution.content.replace(/(<([^>]+)>)/ig, '').substring(0, 200)
     }
   }
 })

@@ -1,7 +1,7 @@
 <template>
   <div class="home-content background-offwhite py-md-40 py-100">
-    <img class="circles circles-recent-home-left" :src="images.circles" />
-    <img class="circles circles-recent-home-right rotate-80" :src="images.circles" />
+    <img class="circles circles-recent-home-left" src="../../assets/images/circles/circles.png" />
+    <img class="circles circles-recent-home-right rotate-80" src="../../assets/images/circles/circles.png" />
 
     <div class="container">
       <div class="content">
@@ -32,7 +32,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import circlesImage from '@/assets/images/circles/circles.png'
 import SolutionExcerpt from '@/components/SolutionExcerpt.vue'
 import Solution from '@/domain/Solution'
 import Author from '@/domain/Author'
@@ -45,9 +44,6 @@ const authorAd: Author = new Author(16, 'Ad Vlems', 'ad-vlems', '')
   },
   data: function () {
     return {
-      images: {
-        circles: circlesImage
-      },
       solutions: [
         new Solution(
           'Help the bumblebee to hibernate in your garden',

@@ -4,9 +4,9 @@
   >
     <img
       class="circles circles-header-home-left ls-is-cached lazyloaded"
-      :data-src="images.circles"
+      data-src="../../assets/images/circles/circles.png"
       alt
-      :src="images.circles"
+      src="../../assets/images/circles/circles.png"
     />
     <div class="container">
       <div class="content">
@@ -66,23 +66,11 @@
 
           <div class="col-xl-4">
             <div class="flex justify-center">
-              <div
-                class="community-image border-radius box-shadow background-size-cover background-position-center position-relative mt-xs-20 mt-lg-60"
-                :style="{backgroundImage: 'url('+images.communityGroup+')'}"
-              >
-                <div
-                  class="community-user-top position-absolute circle-lg circle-border-md box-shadow flex align-center justify-center background-position-center background-size-cover"
-                  :style="{backgroundImage: 'url('+images.profile.p22+')'}"
-                ></div>
+              <div class="community-image border-radius box-shadow background-size-cover background-position-center position-relative mt-xs-20 mt-lg-60">
+                <div class="community-user-top profile-22 position-absolute circle-lg circle-border-md box-shadow flex align-center justify-center background-position-center background-size-cover"></div>
 
-                <div
-                  class="user-message-top position-absolute background-white border-radius px-15 py-5"
-                >295 likes</div>
-
-                <div
-                  class="community-user-bottom position-absolute circle-lg circle-border-md box-shadow flex align-center justify-center background-position-center background-size-cover"
-                  :style="{backgroundImage: 'url('+images.profile.p15+')'}"
-                ></div>
+                <div class="user-message-top position-absolute background-white border-radius px-15 py-5">295 likes</div>
+                <div class="community-user-bottom profile-15 position-absolute circle-lg circle-border-md box-shadow flex align-center justify-center background-position-center background-size-cover"></div>
 
                 <div
                   class="user-message-bottom position-absolute background-white border-radius px-15 py-5"
@@ -98,29 +86,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import circlesImage from '@/assets/images/circles/circles.png'
 
-import profile15Image from '@/assets/images/profile/15.png'
-import profile22Image from '@/assets/images/profile/22.jpg'
-import communityGroupImage from '@/assets/images/community-group.png'
-
-@Component({
-  components: {},
-  data: function () {
-    return {
-      images: {
-        circles: circlesImage,
-        profile: {
-          p15: profile15Image,
-          p22: profile22Image
-        },
-        communityGroup: communityGroupImage
-      }
-    }
-  }
-})
+@Component({})
 export default class HomepageWelcome extends Vue {}
 </script>
 
-<style>
-</style>template
+<style scoped>
+.community-image {
+  background-image: url(../../assets/images/community-group.png);
+}
+.profile-15 {
+  background-image: url(../../assets/images/profile/15.png);
+}
+.profile-22 {
+  background-image: url(../../assets/images/profile/22.jpg);
+}
+</style>
