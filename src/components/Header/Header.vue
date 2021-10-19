@@ -14,6 +14,7 @@
                         <menu-item to="/sdgs/">SDG's</menu-item>
                         <menu-item to="/scoreboard/">Scoreboard</menu-item>
                         <menu-item to="/search/">Zoeken</menu-item>
+                        <menu-item to="/solutions/">Solutions</menu-item>
                         <router-link class="btn btn-orange small-text" to="/add-content/">
                             <svg class="svg-inline--fa fa-plus fa-w-14 mr-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><!-- <i class="fas fa-plus mr-5"></i> --> Oplossing toevoegen
                         </router-link>
@@ -38,6 +39,7 @@
                     <router-link to="/" class="active bold-text h3 mb-sm-20 mb-60">Home</router-link>
                     <router-link to="/sdgs/" class=" bold-text mb-sm-20 h3 mb-60">SDG's</router-link>
                     <router-link to="/search/" class=" bold-text mb-sm-20 h3 mb-60">Zoeken</router-link>
+                    <router-link to="/solutions/" class=" bold-text mb-sm-20 h3 mb-60">Solutions</router-link>
                     <router-link class="btn btn-orange mb-30" to="/add-content/">
                         <svg class="svg-inline--fa fa-plus fa-w-14 mr-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><!-- <i class="fas fa-plus mr-5"></i> --> Oplossing toevoegen
                     </router-link>
