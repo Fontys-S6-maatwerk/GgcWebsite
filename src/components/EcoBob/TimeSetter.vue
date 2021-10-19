@@ -1,7 +1,7 @@
 +<template>
     <div onload="GetCurrentTime()">
         <small>Selecteer hier nieuwe tijd automatisch bericht.</small>	
-        <vue-timepicker v-model="TimeValue" format="HH:mm:ss"></vue-timepicker>
+        <vue-timepicker v-model="this.TimeValue" format="HH:mm:ss"></vue-timepicker>
 
         <small> huidige tijd automatische post:    <script type="text/javascript">
         document.write(currentTime)
@@ -13,16 +13,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { twitterbotService } from "@/services/TwitterbotService"
 
 @Component({})
 export default class TimeSetter extends Vue {
-    private currentTime: String = "";
+    private TimeValue: String = "";
 GetCurrentTime(){
-    //get data from service
-    //currentime = data
+   twitterbotService.GetCurrentTime().then((res) => {
+        this.TimeValue = res;
+      });
 }
 SetTime(){
-    //datastuff met TimeValue
+    twitterbotService.SetCurrentTime(this.TimeValue);
 }
 }
 

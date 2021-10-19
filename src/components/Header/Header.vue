@@ -10,23 +10,20 @@
                     </div>
 
                     <div class="menu-items menu-desktop text-center">
-                        <menu-item to="/">{{ $t('Home') }}</menu-item>
-                        <menu-item to="/sdgs/">{{ $t('Sdgs') }}</menu-item>
-                        <menu-item to="/scoreboard/">{{ $t('Leaderboard') }}</menu-item>
-                        <menu-item to="/search/">{{ $t('Search') }}</menu-item>
-                        <menu-item to="/dashboard/">{{ $t('Dashboard') }}</menu-item>
+                        <menu-item to="/">Home</menu-item>
+                        <menu-item to="/sdgs/">SDG's</menu-item>
+                        <menu-item to="/scoreboard/">Scoreboard</menu-item>
+                        <menu-item to="/search/">Zoeken</menu-item>
+                        <menu-item to="/botadmin/">TwitterBot</menu-item>
                         <router-link class="btn btn-orange small-text" to="/add-content/">
-                            <svg class="svg-inline--fa fa-plus fa-w-14 mr-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><!-- <i class="fas fa-plus mr-5"></i> -->
-                            {{ $t('Add solution') }}
+                            <svg class="svg-inline--fa fa-plus fa-w-14 mr-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><!-- <i class="fas fa-plus mr-5"></i> --> Oplossing toevoegen
                         </router-link>
                     </div>
                 </div>
 
                 <div class="menu-options menu-desktop flex flex-end align-center">
-                    <LanguagePicker />
-
-                    <router-link to="/register/" class="btn-register bold-text ml-50 ml-xs-0 mb-xs-20">{{ $t('Register') }}</router-link>
-                    <router-link to="/login/" class="btn btn-secondary ml-30 ml-xs-0">{{ $t('Sign in') }}</router-link>
+                    <router-link to="/register/" class="btn-register bold-text ml-50 ml-xs-0 mb-xs-20">Registreren</router-link>
+                    <router-link to="/login/" class="btn btn-secondary ml-30 ml-xs-0">Inloggen</router-link>
                 </div>
 
                 <span id="toggle" class="toggle" v-on:click="toggleMenu()">
@@ -39,17 +36,16 @@
         <div id="menu-mobile" :class="['menu-mobile', 'transition', 'background-white', 'text-center-lg', isMenuOpen ? '' : 'closed']">
             <div class="container">
                 <div class="menu-items flex flex-col space-between align-center justify-center p-sm-20 p-md-60 p-60">
-                    <router-link to="/" class="active bold-text h3 mb-sm-20 mb-60">{{ $t('Home') }}</router-link>
-                    <router-link to="/sdgs/" class=" bold-text mb-sm-20 h3 mb-60">{{ $t('Sdgs') }}</router-link>
-                    <router-link to="/search/" class=" bold-text mb-sm-20 h3 mb-60">{{ $t('Search') }}</router-link>
-                    <router-link to="/dashboard/" class=" bold-text mb-sm-20 h3 mb-60">{{ $t('Dashboard') }}</router-link>
+                    <router-link to="/" class="active bold-text h3 mb-sm-20 mb-60">Home</router-link>
+                    <router-link to="/sdgs/" class=" bold-text mb-sm-20 h3 mb-60">SDG's</router-link>
+                    <router-link to="/search/" class=" bold-text mb-sm-20 h3 mb-60">Zoeken</router-link>
+                    <<router-link to="/botadmin/" class=" bold-text mb-sm-20 h3 mb-60" >Twitterbot</router-link>
                     <router-link class="btn btn-orange mb-30" to="/add-content/">
-                        <svg class="svg-inline--fa fa-plus fa-w-14 mr-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><!-- <i class="fas fa-plus mr-5"></i> -->
-                        {{ $t('Add solution') }}
+                        <svg class="svg-inline--fa fa-plus fa-w-14 mr-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg><!-- <i class="fas fa-plus mr-5"></i> --> Oplossing toevoegen
                     </router-link>
                     <div class="flex flex-col-sm align-center">
-                        <router-link to="/register/" class="btn-register bold-text mr-sm-0 mr-20 mb-sm-20 mb-0">{{ $t('Register') }}</router-link>
-                        <router-link to="/login/" class="btn btn-secondary">{{ $t('Sign in') }}</router-link>
+                        <router-link to="/register/" class="btn-register bold-text mr-sm-0 mr-20 mb-sm-20 mb-0">Registreren</router-link>
+                        <router-link to="/login/" class="btn btn-secondary">Inloggen</router-link>
                     </div>
                 </div>
             </div>
@@ -58,28 +54,24 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-property-decorator'
 import MenuItem from './MenuItem.vue'
-import LanguagePicker from './LanguagePicker.vue'
 import '@/assets/images/Logo_GGC.png'
 
-export default Vue.extend({
-  name: 'Header',
+export default {
   components: {
-    MenuItem,
-    LanguagePicker
+    MenuItem
   },
-  data () {
+  data (): Record<string, unknown> {
     return {
-      isMenuOpen: false as boolean
+      isMenuOpen: false
     }
   },
   methods: {
-    toggleMenu (): void {
+    toggleMenu: function () {
       this.isMenuOpen = !this.isMenuOpen
     }
   }
-})
+}
 </script>
 
 <style lang="css" scoped>
@@ -184,7 +176,6 @@ header .container .content .toggle #times {
 
 header .container .content .menu-desktop {
   display: none;
-  align-items: center;
 }
 
 header .menu-mobile {
@@ -208,7 +199,7 @@ header .menu-mobile .menu-items {
 
 @media (min-width: 1200px) {
   header .container .content .menu-desktop {
-    display: flex;
+    display: inherit;
   }
 
   header .menu-mobile {
