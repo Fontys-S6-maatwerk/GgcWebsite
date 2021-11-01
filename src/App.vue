@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { bus } from '@/main'
+import i18n from '@/i18n'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 
@@ -14,6 +16,11 @@ export default {
   components: {
     Header,
     Footer
+  },
+  created () {
+    bus.$on('set-language', (data) => {
+      i18n.locale = data
+    })
   }
 }
 </script>
