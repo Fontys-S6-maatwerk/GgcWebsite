@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import Solutions from '../views/Solutions.vue'
+import Solutions from '../views/Dashboard.vue'
 
 Vue.use(VueRouter)
 
@@ -12,8 +12,8 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: '/solutions',
-    name: 'Solutions',
+    path: '/dashboard',
+    name: 'Dashboard',
     component: Solutions
   },
   {

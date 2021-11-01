@@ -8,10 +8,10 @@
 
 <script>
 /* eslint-disable */
-import AllSolutions from "@/components/Solutions/AllSolutions.vue";
+import AllSolutions from "@/components/dashboard/AllSolutions.vue";
 
 export default {
-  name: "Solutions",
+  name: "Dashboard",
   components: {
     AllSolutions,
   },

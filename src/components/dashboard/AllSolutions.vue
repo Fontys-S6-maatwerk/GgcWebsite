@@ -15,7 +15,7 @@ export default {
   }),
 
   mounted() {
-    this.title = "This is the solutions page.";
+    this.title = "Dashboard";
   },
 
   methods: {},
