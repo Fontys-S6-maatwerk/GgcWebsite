@@ -1,21 +1,22 @@
 <template>
   <div class="col-xl-3 col-md-6">
-    <router-link to="/creation/81/81-how-to-make-a-herb-spiral/" class="card mb-lg-20">
+    <router-link :to="url" class="card mb-lg-20">
       <div
         class="card-image position-relative callout lazyloaded"
-        data-bgset="public/assets/content/header/81-header.png"
-        style="background-image: url('https://globalgoalscommunity.eu/public/assets/content/header/81-header.png');"
+        :data-bgset="'public/assets/content/header/' + solution.id + '-header.png'"
+        :style="{
+          backgroundImage: 'url(\'https://globalgoalscommunity.eu/public/assets/content/header/'+solution.id+'-header.png\')'}"
       >
         <div
           class="card-user-image position-absolute callout lazyloaded"
-          data-bgset="/public/assets/profile/16.png"
-          style="background-image: url('https://globalgoalscommunity.eu/public/assets/profile/16.png');"
+          :data-bgset="'/public/assets/profile/'+solution.author.id+'.png'"
+          :style="{backgroundImage: 'url(\'https://globalgoalscommunity.eu/public/assets/profile/'+solution.author.id+'.png\')'}"
         >
           <picture style="display: none">
             <source
-              data-srcset="/public/assets/profile/16.png"
+              :data-srcset="'/public/assets/profile/'+solution.author.id+'.png'"
               sizes="80px"
-              srcset="/public/assets/profile/16.png"
+              :srcset="'/public/assets/profile/'+solution.author.id+'.png'"
             />
             <img
               alt
@@ -28,9 +29,9 @@
         </div>
         <picture style="display: none">
           <source
-            data-srcset="public/assets/content/header/81-header.png"
+            :data-srcset="'public/assets/content/header/'+solution.id+'-header.png'"
             sizes="445px"
-            srcset="public/assets/content/header/81-header.png"
+            :srcset="'public/assets/content/header/'+solution.id+'-header.png'"
           />
           <img
             alt
@@ -55,7 +56,7 @@
         </div>
 
         <div class="sdgs">
-          <sdg-badge v-for="(number, index) in solution.sdgs" v-bind:key="index" :number="number" />
+          <sdg-badge v-for="(number, index) in solution.sdgs" v-bind:key="index" :number="number" :small="true" />
         </div>
 
         <hr />
@@ -98,6 +99,12 @@ import moment from 'moment'
   computed: {
     exerpt: function () {
       return this.$props.solution.content.replace(/(<([^>]+)>)/ig, '').substring(0, 200)
+    },
+    url: function () {
+      return '/solution/' + this.$props.solution.id + '/' + (this.$props.solution.title.trim().replace(/[^a-z0-9]/gi, '-').toLowerCase()) + '/'
+    },
+    headerImageUrl: function () {
+      return 'public/assets/content/header/' + this.$props.solution.id + '-header.png'
     }
   }
 })
