@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import Solutions from '../views/Dashboard.vue'
+import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
+import Solutions from '../views/Solutions.vue'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -16,12 +17,17 @@ const routes: Array<RouteConfig> = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Solutions
+    component: Dashboard
   },
   {
     path: '/sdgs',
     name: 'SGGs',
     component: SGDs
+  },
+  {
+    path: '/add-solution',
+    name: 'Solutions',
+    component: Solutions
   },
   {
     path: '/about',
