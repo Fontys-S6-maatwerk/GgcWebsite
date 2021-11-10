@@ -2,7 +2,7 @@ import http from '@/services/http';
 
 export default class TwitterbotService{
 
-    public async GetCurrentTime(): Promise<String>{
+    public async GetCurrentTime(){
         const response = await http.get('/api/twitter/currenttime');
         return response.data;
     }
