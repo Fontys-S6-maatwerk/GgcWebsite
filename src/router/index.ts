@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Solutions from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
+import SolutionsPerSDG from '../views/SolutionsPerSDG.vue'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/sdgs',
     name: 'SGGs',
     component: SGDs
+  },
+  {
+    path: '/solutionpersdg/:sdgID',
+    name: 'SolutionPerSDG',
+    component: SolutionsPerSDG
   },
   {
     path: '/about',

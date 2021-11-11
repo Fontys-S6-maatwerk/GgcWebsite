@@ -2,7 +2,7 @@
   <div class="homepage">
     <SDGWelcome />
     <div class="page-content">
-      <SDGinfo />
+      <SDGGeneralInfo />
       <SDGBlocks />
     </div>
 
@@ -13,13 +13,13 @@
 /* eslint-disable */
   import { Component, Vue } from 'vue-property-decorator'
   import SDGWelcome from '@/components/SDGs/SDGWelcome.vue'
-  import SDGinfo from '@/components/SDGs/SDGinfo.vue'
+  import SDGGeneralInfo from '@/components/SDGs/SDGGeneralInfo.vue'
   import SDGBlocks from '@/components/SDGs/SDGBlocks.vue'
 
 @Component({
   components: {
     SDGWelcome,
-    SDGinfo,
+    SDGGeneralInfo,
     SDGBlocks,
   }
 })
