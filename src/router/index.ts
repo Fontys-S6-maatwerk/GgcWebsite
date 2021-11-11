@@ -3,7 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
-import Solutions from '../views/Solutions.vue'
+import AddSolution from '../views/AddSolution.vue'
+import Article from '../views/AddSolution/Article.vue'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -25,9 +26,9 @@ const routes: Array<RouteConfig> = [
     component: SGDs
   },
   {
-    path: '/add-solution',
-    name: 'Solutions',
-    component: Solutions
+    path: '/add-content',
+    name: 'AddSolution',
+    component: AddSolution
   },
   {
     path: '/about',
