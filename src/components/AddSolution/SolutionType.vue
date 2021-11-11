@@ -194,7 +194,7 @@
 
             <div class="row">
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div v-on:click="alert()" class="content-type">
+                <div v-on:click="changeStep()" class="content-type">
                   <svg
                     class="svg-inline--fa fa-book-open fa-w-18 icon-type mb-15"
                     aria-hidden="true"
@@ -312,9 +312,9 @@ export default {
   mounted() {},
 
   methods: {
-      alert: function () {
-        alert();
-      }
+    changeStep() {
+      this.$emit("nextStep", "Article");
+    },
   },
 
   computed: {},

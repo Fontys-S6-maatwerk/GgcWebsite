@@ -1,9 +1,6 @@
 <template>
   <div class="AddSolution">
-    <div class="page-content">
-      <SolutionType v-if="showSolutionTypes==true" />
-      <Article v-if="showArticles==true" />
-    </div>
+    <component @nextStep="changeStep" v-bind:is="selectedComponent"></component>
   </div>
 </template>
 
@@ -20,16 +17,17 @@ export default {
   },
 
   data: () => ({
-    showSolutionTypes: true,
-    showArticles: false,
+    selectedComponent: "",
   }),
 
-  mounted() {},
+  mounted() {
+    this.selectedComponent = "SolutionType";
+  },
 
   methods: {
-    createArticle: function () {
-
-    }
+    changeStep: function (step) {
+      this.selectedComponent = step;
+    },
   },
 
   computed: {},
