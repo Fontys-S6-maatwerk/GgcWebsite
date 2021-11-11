@@ -1,24 +1,26 @@
 <template>
   <div id="app">
     <Header />
-    <router-view/>
+    <main class="pt-80">
+      <router-view/>
+    </main>
     <Footer />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { bus } from '@/main'
 import i18n from '@/i18n'
-import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer/Footer'
+import Header from '@/components/Header/Header.vue'
+import Footer from '@/components/Footer/Footer.vue'
 
 export default {
   components: {
     Header,
     Footer
   },
-  created () {
-    bus.$on('set-language', (data) => {
+  created (): void {
+    bus.$on('set-language', (data: string) => {
       i18n.locale = data
     })
   }

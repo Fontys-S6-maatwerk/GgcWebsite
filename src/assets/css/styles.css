@@ -8601,75 +8601,75 @@ ul.breadcrumb li+li:before {
     color: #05A66B;
 }
 
-.creation .swal2-popup {
+.swal2-popup {
     border-radius: 0.5rem;
     -webkit-box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
     box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
 }
 
-.creation .swal2-popup .swal2-confirm {
+.swal2-popup .swal2-confirm {
     background-color: #05A66B;
     border-color: transparent;
 }
 
-.creation .circles-content-left {
+.circles-content-left {
     left: -16rem;
     bottom: 30rem;
 }
 
-.creation .circles-content-right {
+.circles-content-right {
     right: -5rem;
     top: 6rem;
 }
 
-.creation .date {
+.date {
     color: #B9B9B9;
 }
 
-.creation .statistics {
+.statistics {
     color: #B9B9B9;
 }
 
-.creation .content-information {
+.content-information {
     position: relative;
 }
 
-.creation .content-information .creation-content h3 {
+.content-information .creation-content h3 {
     margin-bottom: 1rem;
     text-align: left;
 }
 
-.creation .content-information .creation-content p {
+.content-information .creation-content p {
     margin-bottom: 1rem;
 }
 
-.creation .content-information .creation-content a {
+.content-information .creation-content a {
     color: blue;
 }
 
-.creation .content-information .creation-content blockquote {
+.content-information .creation-content blockquote {
     border-left: 0.5rem solid #E4E4E4;
     padding-left: 1rem;
 }
 
-.creation .content-information .creation-content blockquote * {
+.content-information .creation-content blockquote * {
     margin-bottom: 0;
 }
 
-.creation .content-information .creation-content .table {
+.content-information .creation-content .table {
     margin: 0;
 }
 
-.creation .content-information .creation-content .table table {
+.content-information .creation-content .table table {
     border-collapse: collapse;
 }
 
-.creation .content-information .creation-content .table table td {
+.content-information .creation-content .table table td {
     padding: .5rem;
     border: 0.1rem solid #000000;
 }
 
-.creation .content-information .user-profile .user-profile-image {
+.content-information .user-profile .user-profile-image {
     width: 8rem;
     height: 8rem;
     border-radius: 4rem;
@@ -8678,12 +8678,12 @@ ul.breadcrumb li+li:before {
     border: 0.5rem solid #FFFFFF;
 }
 
-.creation .content-information .user-profile img {
+.content-information .user-profile img {
     height: auto;
     width: 100%;
 }
 
-.creation .content-information .user-profile .follow-button {
+.content-information .user-profile .follow-button {
     color: #FD6925;
     border: 1px solid #FD6925;
     border-radius: 0.5rem;
@@ -8692,13 +8692,13 @@ ul.breadcrumb li+li:before {
     transition: all 0.3s ease-in-out;
 }
 
-.creation .content-information .user-profile .follow-button:hover {
+.content-information .user-profile .follow-button:hover {
     color: #FFFFFF;
     background-color: #FD6925;
     cursor: pointer;
 }
 
-.creation .content-information .creation-header-image {
+.content-information .creation-header-image {
     width: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -8708,23 +8708,23 @@ ul.breadcrumb li+li:before {
 }
 
 @media (max-width: 991.98px) {
-    .creation .content-information .creation-header-image {
+    .content-information .creation-header-image {
         height: 150px;
     }
 }
 
-.creation .content-information .content-image {
+.content-information .content-image {
     width: 100%;
     border-radius: 0.5rem;
     -webkit-box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
     box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
 }
 
-.creation .content-information .statistics-bottom {
+.content-information .statistics-bottom {
     border-bottom: 0.1rem solid #B9B9B9;
 }
 
-.creation .content-information .content-actions .action {
+.content-information .content-actions .action {
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -8734,45 +8734,45 @@ ul.breadcrumb li+li:before {
     box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
 }
 
-.creation .content-information .content-actions .action.liked svg {
+.content-information .content-actions .action.liked svg {
     fill: #FFFFFF;
 }
 
-.creation .content-information .content-actions .action#report.reported {
+.content-information .content-actions .action#report.reported {
     color: #E5243B;
     border-color: #E5243B;
 }
 
-.creation .content-information .content-actions .action#report.reported:hover {
+.content-information .content-actions .action#report.reported:hover {
     background-color: #FFFFFF;
 }
 
-.creation .content-information .content-actions .action-like {
+.content-information .content-actions .action-like {
     background-color: #FD6925;
     color: #FFFFFF;
     border: 0.1rem solid #FD6925;
 }
 
-.creation .content-information .content-actions .action-like:hover {
+.content-information .content-actions .action-like:hover {
     color: #FD6925;
     background-color: #FFFFFF;
 }
 
-.creation .content-information .content-actions .action-report {
+.content-information .content-actions .action-report {
     color: #B9B9B9;
     border: 1px solid #B9B9B9;
 }
 
-.creation .content-information .content-actions .action-report:hover {
+.content-information .content-actions .action-report:hover {
     background-color: #B9B9B9;
     color: #FFFFFF;
 }
 
-.creation .content-information .share-action:hover {
+.content-information .share-action:hover {
     cursor: pointer;
 }
 
-.creation .content-information .share-action .user-profile-image {
+.content-information .share-action .user-profile-image {
     width: 6.5rem;
     height: 6.5rem;
     border-radius: 3.25rem;
@@ -8781,58 +8781,58 @@ ul.breadcrumb li+li:before {
     border: 0.5rem solid #FFFFFF;
 }
 
-.creation .content-information .recent-solutions {
+.content-information .recent-solutions {
     max-width: 45rem;
 }
 
-.creation .content-information .populair-sdgs {
+.content-information .populair-sdgs {
     max-width: 45rem;
 }
 
-.creation .add-comment {
+.add-comment {
     position: relative;
     border-radius: 0.5rem;
     -webkit-box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
     box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
 }
 
-.creation .add-comment .comment-input input,
-.creation .add-comment .comment-input textarea {
+.add-comment .comment-input input,
+.add-comment .comment-input textarea {
     border: .2rem solid transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.creation .add-comment .comment-input input.error,
-.creation .add-comment .comment-input textarea.error {
+.add-comment .comment-input input.error,
+.add-comment .comment-input textarea.error {
     border: 0.2rem solid #E5243B;
 }
 
-.creation .add-comment .comment-input .input-title {
+.add-comment .comment-input .input-title {
     height: 5rem;
 }
 
-.creation .add-comment .comment-input .input-content {
+.add-comment .comment-input .input-content {
     height: 10rem;
 }
 
-.creation .comments {
+.comments {
     background-color: #F8F8F8;
 }
 
-.creation .comments .comment {
+.comments .comment {
     background-color: #FFFFFF;
     -webkit-box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
     box-shadow: 0 0.3rem 0.6rem rgba(33, 42, 37, 0.15);
     border-radius: 0.5rem;
 }
 
-.creation .comments .comment .hot-comment {
+.comments .comment .hot-comment {
     background-color: #FD6925;
     color: #FFFFFF;
 }
 
-.creation .comments .comment .like-comment {
+.comments .comment .like-comment {
     display: inline-block;
     color: #B9B9B9;
     cursor: pointer;
@@ -8840,21 +8840,21 @@ ul.breadcrumb li+li:before {
     transition: all 0.3s ease-in-out;
 }
 
-.creation .comments .comment .like-comment:hover,
-.creation .comments .comment .like-comment.liked {
+.comments .comment .like-comment:hover,
+.comments .comment .like-comment.liked {
     color: #05A66B;
 }
 
-.creation .green {
+.green {
     color: #05A66B;
     background: none;
 }
 
-.creation .show-arrow .hidden {
+.show-arrow .hidden {
     visibility: hidden;
 }
 
-.creation .show-arrow:hover .hidden {
+.show-arrow:hover .hidden {
     visibility: visible;
 }
 
