@@ -194,7 +194,7 @@
 
             <div class="row">
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <div v-on:click="changeStep()" class="content-type">
+                <div v-on:click="changeStep(articleComponent)" class="content-type">
                   <svg
                     class="svg-inline--fa fa-book-open fa-w-18 icon-type mb-15"
                     aria-hidden="true"
@@ -216,7 +216,7 @@
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="/add-content/" data-type="1" class="content-type">
+                <div v-on:click="changeStep(howToComponent)" data-type="1" class="content-type">
                   <svg
                     class="svg-inline--fa fa-tools fa-w-16 icon-type mb-15"
                     aria-hidden="true"
@@ -234,11 +234,11 @@
                     ></path></svg
                   ><!-- <i class="fas fa-tools icon-type mb-15"></i> -->
                   <span class="bold-text">How-to</span>
-                </a>
+                </div>
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="/add-content/" data-type="3" class="content-type">
+                <div v-on:click="changeStep(videoComponent)" data-type="3" class="content-type">
                   <svg
                     class="svg-inline--fa fa-film fa-w-16 icon-type mb-15"
                     aria-hidden="true"
@@ -256,12 +256,12 @@
                     ></path></svg
                   ><!-- <i class="fas fa-film icon-type mb-15"></i> -->
                   <span class="bold-text">Video</span>
-                </a>
+                </div>
               </div>
 
               <div class="col-lg-3 col-md-4 col-sm-6">
-                <a
-                  href="/add-content/"
+                <div
+                  v-on:click="changeStep(podcastComponent)"
                   data-type="4"
                   class="
                     content-type
@@ -289,7 +289,7 @@
                     ></path></svg
                   ><!-- <i class="fas fa-headphones icon-type mb-15"></i> -->
                   <span class="bold-text">Podcast</span>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -307,13 +307,24 @@
 export default {
   name: "SolutionType",
 
-  data: () => ({}),
+  data: () => ({
+    articleComponent: "",
+    howToComponent: "",
+    videoComponent: "",
+    podcastComponent: "",
+  }),
 
-  mounted() {},
+  mounted() {
+    this.articleComponent = "Article";
+    this.howToComponent = "HowTo";
+    this.videoComponent = "Video";
+    this.podcastComponent = "Podcast";
+  },
 
   methods: {
-    changeStep() {
-      this.$emit("nextStep", "Article");
+    changeStep(component) {
+      this.$emit("nextStep", component);
+      console.log(component)
     },
   },
 

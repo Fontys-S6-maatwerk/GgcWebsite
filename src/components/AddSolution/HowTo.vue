@@ -1,9 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.2/dist/sweetalert2.all.min.js"></script>
-<script src="/public/js/site.js?v=1637055474"></script>
-<script src="/src/assets/js/site.js?v=1637059735"></script>
-<script src="/src/assets/js/add-content.js"></script>
-
 <template>
   <main class="pt-80">
     <div
@@ -19,7 +13,7 @@
         position-fixed
         p-15
       "
-      style="display: block"
+      style="display: none"
     >
       <svg
         class="svg-inline--fa fa-arrow-up fa-w-14 icon"
@@ -156,8 +150,8 @@
               name="action"
               value="add-content"
             />
-            <input type="hidden" name="id" value="162" />
-            <input type="hidden" name="type" value="2" />
+            <input type="hidden" name="id" value="164" />
+            <input type="hidden" name="type" value="1" />
 
             <div class="input-card input-wrapper mb-50">
               <div
@@ -477,6 +471,7 @@
                           <span class="mr-10">13.</span>
                           <span>Klimaatactie</span>
                         </div>
+
                         <input
                           type="checkbox"
                           class="sdg-checkbox"
@@ -486,12 +481,14 @@
                         <span class="checkbox"></span>
                       </label>
                     </div>
+
                     <div class="flex flex-row pb-10" style="min-height: 4rem">
                       <label class="checkbox-wrapper">
                         <div class="flex">
                           <span class="mr-10">14.</span>
                           <span>Leven in het water</span>
                         </div>
+
                         <input
                           type="checkbox"
                           class="sdg-checkbox"
@@ -501,12 +498,14 @@
                         <span class="checkbox"></span>
                       </label>
                     </div>
+
                     <div class="flex flex-row pb-10" style="min-height: 4rem">
                       <label class="checkbox-wrapper">
                         <div class="flex">
                           <span class="mr-10">15.</span>
                           <span>Leven op het land</span>
                         </div>
+
                         <input
                           type="checkbox"
                           class="sdg-checkbox"
@@ -516,6 +515,7 @@
                         <span class="checkbox"></span>
                       </label>
                     </div>
+
                     <div class="flex flex-row pb-10" style="min-height: 4rem">
                       <label class="checkbox-wrapper">
                         <div class="flex">
@@ -524,6 +524,7 @@
                             >Vrede, justitie en sterke publieke diensten</span
                           >
                         </div>
+
                         <input
                           type="checkbox"
                           class="sdg-checkbox"
@@ -533,6 +534,7 @@
                         <span class="checkbox"></span>
                       </label>
                     </div>
+
                     <div class="flex flex-row pb-10" style="min-height: 4rem">
                       <label class="checkbox-wrapper">
                         <div class="flex">
@@ -541,6 +543,7 @@
                             >Partnerschap om doelstellingen te bereiken</span
                           >
                         </div>
+
                         <input
                           type="checkbox"
                           class="sdg-checkbox"
@@ -589,7 +592,7 @@
                       >
                     </div>
 
-                    <span class="delete-img link display-none" data-id="162"
+                    <span class="delete-img link display-none" data-id="164"
                       >Delete</span
                     >
                   </div>
@@ -672,11 +675,11 @@
                   role="application"
                   dir="ltr"
                   lang="en"
-                  aria-labelledby="ck-editor__label_e2d7ea903b9cab4f3d415181a8480ca9f"
+                  aria-labelledby="ck-editor__label_ed09a97a1c9a124f010f181d900b436a7"
                 >
                   <label
                     class="ck ck-label ck-voice-label"
-                    id="ck-editor__label_e2d7ea903b9cab4f3d415181a8480ca9f"
+                    id="ck-editor__label_ed09a97a1c9a124f010f181d900b436a7"
                     >Tekstbewerker</label
                   >
                   <div
@@ -704,7 +707,7 @@
                                 "
                                 type="button"
                                 tabindex="-1"
-                                aria-labelledby="ck-editor__aria-label_ea25971ec048f2a8ea41475300b47ac3b"
+                                aria-labelledby="ck-editor__aria-label_e6d40a54bc9a0bef631b2e3a504842051"
                                 aria-haspopup="true"
                               >
                                 <span class="ck ck-tooltip ck-tooltip_s"
@@ -713,7 +716,7 @@
                                   ></span
                                 ><span
                                   class="ck ck-button__label"
-                                  id="ck-editor__aria-label_ea25971ec048f2a8ea41475300b47ac3b"
+                                  id="ck-editor__aria-label_e6d40a54bc9a0bef631b2e3a504842051"
                                   >Paragraaf</span
                                 ><svg
                                   class="ck ck-icon ck-dropdown__arrow"
@@ -741,7 +744,7 @@
                                       "
                                       type="button"
                                       tabindex="-1"
-                                      aria-labelledby="ck-editor__aria-label_e76fdce0ea2385483e57b027f62565dcd"
+                                      aria-labelledby="ck-editor__aria-label_ed5db5fd93341c15967c74033ec7db19c"
                                     >
                                       <span
                                         class="
@@ -753,7 +756,7 @@
                                         ></span></span
                                       ><span
                                         class="ck ck-button__label"
-                                        id="ck-editor__aria-label_e76fdce0ea2385483e57b027f62565dcd"
+                                        id="ck-editor__aria-label_ed5db5fd93341c15967c74033ec7db19c"
                                         >Paragraaf</span
                                       >
                                     </button>
@@ -768,7 +771,7 @@
                                       "
                                       type="button"
                                       tabindex="-1"
-                                      aria-labelledby="ck-editor__aria-label_ed1c9cf83c2cf3a7dfa94928355168f98"
+                                      aria-labelledby="ck-editor__aria-label_e506be3af96ed3c2d1de1790c03c102c4"
                                     >
                                       <span
                                         class="
@@ -780,7 +783,7 @@
                                         ></span></span
                                       ><span
                                         class="ck ck-button__label"
-                                        id="ck-editor__aria-label_ed1c9cf83c2cf3a7dfa94928355168f98"
+                                        id="ck-editor__aria-label_e506be3af96ed3c2d1de1790c03c102c4"
                                         >Heading</span
                                       >
                                     </button>
@@ -793,7 +796,7 @@
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_eb10bca85fe876733b7f21ced309e56c6"
+                              aria-labelledby="ck-editor__aria-label_ea86d718719e5b891eb8e7163f63cc489"
                               aria-pressed="false"
                             >
                               <svg
@@ -809,14 +812,14 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_eb10bca85fe876733b7f21ced309e56c6"
+                                id="ck-editor__aria-label_ea86d718719e5b891eb8e7163f63cc489"
                                 >Vet</span
                               ></button
                             ><button
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e1d0381011c5a2813074f1c91297be016"
+                              aria-labelledby="ck-editor__aria-label_e488afc336bb04491f373525b85b2ad88"
                               aria-pressed="false"
                             >
                               <svg
@@ -832,14 +835,14 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e1d0381011c5a2813074f1c91297be016"
+                                id="ck-editor__aria-label_e488afc336bb04491f373525b85b2ad88"
                                 >Cursief</span
                               ></button
                             ><button
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e8dce9a34a503f1e102c677d4b7de166e"
+                              aria-labelledby="ck-editor__aria-label_e5fa45719e61b7bf5bd2fff328e79d200"
                               aria-pressed="false"
                             >
                               <svg
@@ -855,14 +858,14 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e8dce9a34a503f1e102c677d4b7de166e"
+                                id="ck-editor__aria-label_e5fa45719e61b7bf5bd2fff328e79d200"
                                 >Onderlijnen</span
                               ></button
                             ><button
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e64495e7bd0f8b5923024b6f146df58c0"
+                              aria-labelledby="ck-editor__aria-label_e64af8c67c654230d6960165edac12cbe"
                               aria-pressed="false"
                             >
                               <svg
@@ -879,14 +882,14 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e64495e7bd0f8b5923024b6f146df58c0"
+                                id="ck-editor__aria-label_e64af8c67c654230d6960165edac12cbe"
                                 >Doorhalen</span
                               ></button
                             ><button
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e51c3a0bfcddf309a22e6e534a79674fd"
+                              aria-labelledby="ck-editor__aria-label_e06fbde83da4440df8d1c071a34bb075f"
                               aria-pressed="false"
                             >
                               <svg
@@ -902,7 +905,7 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e51c3a0bfcddf309a22e6e534a79674fd"
+                                id="ck-editor__aria-label_e06fbde83da4440df8d1c071a34bb075f"
                                 >Link</span
                               ></button
                             ><span class="ck ck-toolbar__separator"></span
@@ -910,7 +913,7 @@
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e70a301bf84536048ba023eaac4467580"
+                              aria-labelledby="ck-editor__aria-label_e3e79fd3cb4bbc785ebf1e44cfc5656b7"
                             >
                               <svg
                                 class="ck ck-icon ck-button__icon"
@@ -923,14 +926,14 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e70a301bf84536048ba023eaac4467580"
+                                id="ck-editor__aria-label_e3e79fd3cb4bbc785ebf1e44cfc5656b7"
                                 >Horizontale lijn</span
                               ></button
                             ><button
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_ec97f3be5137cdcef21ad619a915f32bd"
+                              aria-labelledby="ck-editor__aria-label_eff7b44509dc458c5c540a0f7adac1564"
                               aria-pressed="false"
                             >
                               <svg
@@ -946,14 +949,14 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_ec97f3be5137cdcef21ad619a915f32bd"
+                                id="ck-editor__aria-label_eff7b44509dc458c5c540a0f7adac1564"
                                 >Ongenummerde lijst</span
                               ></button
                             ><button
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e21170ac202385151f2b27eeac08a4cdb"
+                              aria-labelledby="ck-editor__aria-label_eada72fa643f7312f014c9d8988a7f062"
                               aria-pressed="false"
                             >
                               <svg
@@ -969,7 +972,7 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e21170ac202385151f2b27eeac08a4cdb"
+                                id="ck-editor__aria-label_eada72fa643f7312f014c9d8988a7f062"
                                 >Genummerde lijst</span
                               ></button
                             ><span class="ck ck-toolbar__separator"></span
@@ -977,7 +980,7 @@
                               class="ck ck-button ck-off"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_e9a0de433f0cbc86b93aaa51122272feb"
+                              aria-labelledby="ck-editor__aria-label_e1162731946c9ca4c96fff19e6b559e67"
                             >
                               <svg
                                 class="ck ck-icon ck-button__icon"
@@ -992,7 +995,7 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_e9a0de433f0cbc86b93aaa51122272feb"
+                                id="ck-editor__aria-label_e1162731946c9ca4c96fff19e6b559e67"
                                 >Inspringen</span
                               >
                             </button>
@@ -1009,7 +1012,7 @@
                               class="ck ck-button ck-off ck-dropdown__button"
                               type="button"
                               tabindex="-1"
-                              aria-labelledby="ck-editor__aria-label_eb731e030003060b5438411a4fd31a3ef"
+                              aria-labelledby="ck-editor__aria-label_ee4e0fb960ac337c94d0971f9547c421a"
                               aria-haspopup="true"
                             >
                               <svg
@@ -1029,7 +1032,7 @@
                                 ></span
                               ><span
                                 class="ck ck-button__label"
-                                id="ck-editor__aria-label_eb731e030003060b5438411a4fd31a3ef"
+                                id="ck-editor__aria-label_ee4e0fb960ac337c94d0971f9547c421a"
                                 >Meer items weergeven</span
                               ><svg
                                 class="ck ck-icon ck-dropdown__arrow"
@@ -1056,7 +1059,7 @@
                                     class="ck ck-button ck-disabled ck-off"
                                     type="button"
                                     tabindex="-1"
-                                    aria-labelledby="ck-editor__aria-label_ec7d58fc7340355f7818b6ef0cdf38de1"
+                                    aria-labelledby="ck-editor__aria-label_e306bb3f59e788aa2aa972d823c5fd1be"
                                     aria-disabled="true"
                                   >
                                     <svg
@@ -1072,7 +1075,7 @@
                                       ></span
                                     ><span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_ec7d58fc7340355f7818b6ef0cdf38de1"
+                                      id="ck-editor__aria-label_e306bb3f59e788aa2aa972d823c5fd1be"
                                       >Minder inspringen</span
                                     ></button
                                   ><span class="ck ck-toolbar__separator"></span
@@ -1080,7 +1083,7 @@
                                     class="ck ck-button ck-off"
                                     type="button"
                                     tabindex="-1"
-                                    aria-labelledby="ck-editor__aria-label_e84d55ef26d98893985870d094b710695"
+                                    aria-labelledby="ck-editor__aria-label_e267e61b0fbecb85f4406c3cd9e5d4d5d"
                                     aria-pressed="false"
                                   >
                                     <svg
@@ -1096,7 +1099,7 @@
                                       ></span
                                     ><span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e84d55ef26d98893985870d094b710695"
+                                      id="ck-editor__aria-label_e267e61b0fbecb85f4406c3cd9e5d4d5d"
                                       >Blok citaat</span
                                     >
                                   </button>
@@ -1108,7 +1111,7 @@
                                       "
                                       type="button"
                                       tabindex="-1"
-                                      aria-labelledby="ck-editor__aria-label_ee4ff1903814ccd867695e73e614cf388"
+                                      aria-labelledby="ck-editor__aria-label_e42be2f44f8a26df209f7b83280deed80"
                                       aria-haspopup="true"
                                     >
                                       <svg
@@ -1124,7 +1127,7 @@
                                         ></span
                                       ><span
                                         class="ck ck-button__label"
-                                        id="ck-editor__aria-label_ee4ff1903814ccd867695e73e614cf388"
+                                        id="ck-editor__aria-label_e42be2f44f8a26df209f7b83280deed80"
                                         >Tabel invoegen</span
                                       ><svg
                                         class="ck ck-icon ck-dropdown__arrow"
@@ -1158,7 +1161,7 @@
                                           class="ck ck-button ck-off"
                                           type="button"
                                           tabindex="-1"
-                                          aria-labelledby="ck-editor__aria-label_eb79c8e3f955c58d1be4a99b13ceddf0a"
+                                          aria-labelledby="ck-editor__aria-label_e66c18b89cc25774ffa3bb73b8e4499c5"
                                         >
                                           <svg
                                             class="ck ck-icon ck-button__icon"
@@ -1174,7 +1177,7 @@
                                             ></span
                                           ><span
                                             class="ck ck-button__label"
-                                            id="ck-editor__aria-label_eb79c8e3f955c58d1be4a99b13ceddf0a"
+                                            id="ck-editor__aria-label_e66c18b89cc25774ffa3bb73b8e4499c5"
                                             >Afbeelding toevoegen</span
                                           ></button
                                         ><input
@@ -1190,7 +1193,7 @@
                                         "
                                         type="button"
                                         tabindex="-1"
-                                        aria-labelledby="ck-editor__aria-label_edb8d87b59cff833931c497940f358e2a"
+                                        aria-labelledby="ck-editor__aria-label_edf888e321acd831d06ed36aca77f0e62"
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                       >
@@ -1211,7 +1214,7 @@
                                           ></span></span
                                         ><span
                                           class="ck ck-button__label"
-                                          id="ck-editor__aria-label_edb8d87b59cff833931c497940f358e2a"
+                                          id="ck-editor__aria-label_edf888e321acd831d06ed36aca77f0e62"
                                         ></span>
                                       </button>
                                     </div>
@@ -1228,7 +1231,7 @@
                                     class="ck ck-button ck-disabled ck-off"
                                     type="button"
                                     tabindex="-1"
-                                    aria-labelledby="ck-editor__aria-label_ed15d4e2e99af2f9a8f6fc473c7822b8a"
+                                    aria-labelledby="ck-editor__aria-label_e2fd8a554fcf22e7ae7cf76ddd641754c"
                                     aria-disabled="true"
                                   >
                                     <svg
@@ -1244,14 +1247,14 @@
                                       ></span
                                     ><span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_ed15d4e2e99af2f9a8f6fc473c7822b8a"
+                                      id="ck-editor__aria-label_e2fd8a554fcf22e7ae7cf76ddd641754c"
                                       >Ongedaan maken</span
                                     ></button
                                   ><button
                                     class="ck ck-button ck-disabled ck-off"
                                     type="button"
                                     tabindex="-1"
-                                    aria-labelledby="ck-editor__aria-label_e3bef9f0937bc89356faaaa0b57aee515"
+                                    aria-labelledby="ck-editor__aria-label_e790e9895759031f2c887e38347071fd2"
                                     aria-disabled="true"
                                   >
                                     <svg
@@ -1267,7 +1270,7 @@
                                       ></span
                                     ><span
                                       class="ck ck-button__label"
-                                      id="ck-editor__aria-label_e3bef9f0937bc89356faaaa0b57aee515"
+                                      id="ck-editor__aria-label_e790e9895759031f2c887e38347071fd2"
                                       >Opnieuw</span
                                     >
                                   </button>
@@ -1282,11 +1285,10 @@
                   <div class="ck ck-editor__main" role="presentation">
                     <div
                       class="
-                        ck ck-content
+                        ck-blurred ck ck-content
                         ck-editor__editable
                         ck-rounded-corners
                         ck-editor__editable_inline
-                        ck-blurred
                       "
                       lang="en"
                       dir="ltr"
@@ -1295,8 +1297,8 @@
                       contenteditable="true"
                     >
                       <p
-                        data-placeholder="Inhoud van de creatie"
                         class="ck-placeholder"
+                        data-placeholder="Inhoud van de creatie"
                       >
                         <br data-cke-filler="true" />
                       </p>
@@ -1349,7 +1351,7 @@
                 </p>
               </div>
 
-              <p class="delete text-gray link" data-id="162">
+              <p class="delete text-gray link" data-id="164">
                 <svg
                   class="svg-inline--fa fa-trash-alt fa-w-14 mr-5"
                   aria-hidden="true"
@@ -1375,30 +1377,3 @@
     </div>
   </main>
 </template>
-
-<script>
-// /* eslint-disable */
-// import addContent from '../../assets/js/add-content.js'
-// import site from '../../assets/js/site.js?v=1637059735'
-
-export default {
-  name: "Article",
-
-  data: () => ({}),
-
-  mounted() {
-
-  },
-
-  methods: {
-    alert: function () {
-      alert();
-    },
-    test: function () {
-      console.log(addContent);
-    }
-  },
-
-  computed: {},
-};
-</script>

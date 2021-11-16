@@ -8,12 +8,18 @@
 /* eslint-disable */
 import SolutionType from "@/components/AddSolution/SolutionType.vue";
 import Article from "@/components/AddSolution/Article.vue";
+import HowTo from "@/components/AddSolution/HowTo.vue";
+import Video from "@/components/AddSolution/Video.vue";
+import Podcast from "@/components/AddSolution/Podcast.vue";
 
 export default {
   name: "AddSolution",
   components: {
     SolutionType,
     Article,
+    HowTo,
+    Video,
+    Podcast
   },
 
   data: () => ({
