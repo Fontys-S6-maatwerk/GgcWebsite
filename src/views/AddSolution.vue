@@ -11,6 +11,8 @@ import Article from "@/components/AddSolution/Article.vue";
 import HowTo from "@/components/AddSolution/HowTo.vue";
 import Video from "@/components/AddSolution/Video.vue";
 import Podcast from "@/components/AddSolution/Podcast.vue";
+import CKEditor from "@ckeditor/ckeditor5-vue2";
+
 
 export default {
   name: "AddSolution",
