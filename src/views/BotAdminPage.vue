@@ -5,3 +5,9 @@
     </div>
     
 </template>
+
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+export default class BotAdminPage extends Vue {}
+</script>

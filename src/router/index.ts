@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Solutions from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
+import BotAdminPage from '../views/BotAdminPage.vue'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -35,6 +36,11 @@ const routes: Array<RouteConfig> = [
     path: '/solution/:id/*',
     name: 'View solution',
     component: () => import('../views/ViewSolution.vue')
+  },
+  {
+    path: '/botadmin',
+    name: 'BotAdmin',
+    component: BotAdminPage
   }
 ]
 
