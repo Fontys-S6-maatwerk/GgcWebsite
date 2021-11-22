@@ -4,10 +4,11 @@ import Home from '../views/Home.vue'
 import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import AddSolution from '../views/AddSolution.vue'
-import CKEditor from '@ckeditor/ckeditor5-vue2';
+import CKEditor from '@ckeditor/ckeditor5-vue2'
 import { component } from 'vue/types/umd'
 
-Vue.use(VueRouter, CKEditor)
+Vue.use(VueRouter)
+Vue.use(CKEditor)
 
 const routes: Array<RouteConfig> = [
   {
