@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xl-3 col-md-6">
+  <div class="col-md-6 mb-20">
     <router-link :to="url" class="card mb-lg-20">
       <div
         class="card-image position-relative callout lazyloaded"

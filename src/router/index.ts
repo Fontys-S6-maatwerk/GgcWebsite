@@ -20,12 +20,12 @@ const routes: Array<RouteConfig> = [
     component: Solutions
   },
   {
-    path: '/sdgs',
+    path: '/sdgs/',
     name: 'SGGs',
     component: SGDs
   },
   {
-    path: '/solutionpersdg/:sdgID',
+    path: '/sdgs/:id/:name',
     name: 'SolutionPerSDG',
     component: SolutionsPerSDG
   },

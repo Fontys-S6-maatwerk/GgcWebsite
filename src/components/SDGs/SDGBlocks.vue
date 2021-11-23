@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 1}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 1, name: 'geen armoede', description: 'description'}, query:{}}">
               <div
                 class="
                   sdg sdg-one
@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 2}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 2, name: 'geen honger', description: 'description'}}">
               <div
                 class="
                   sdg sdg-two
@@ -62,7 +62,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 3}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 3, name: 'goede gezondheid en welzijn', description: 'description'}}">
               <div
                 class="
                   sdg sdg-three
@@ -89,7 +89,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 4}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 4, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-four
@@ -116,7 +116,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 5}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 5, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-five
@@ -143,7 +143,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 6}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 6, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-six
@@ -170,7 +170,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 7}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 7, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-seven
@@ -197,7 +197,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 8}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 8, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-eight
@@ -224,7 +224,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 9}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 9, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-nine
@@ -251,7 +251,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 10}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG',params: { id: 10, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-ten
@@ -278,7 +278,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 11}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 11, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-eleven
@@ -305,7 +305,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 12}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 12, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-twelve
@@ -332,7 +332,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 13}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 13, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-thirteen
@@ -359,7 +359,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 14}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 14, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-fourteen
@@ -386,7 +386,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 15}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 15, name: 'kwalitiets onderwijs', description: 'description'}}">>
               <div
                 class="
                   sdg sdg-fifteen
@@ -413,7 +413,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 16}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 16, name: 'kwalitiets onderwijs', description: 'description'}}">
               <div
                 class="
                   sdg sdg-sixteen
@@ -440,7 +440,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { sdgId: 17}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 17, name: $t('Search'), description: 'description'}}">
               <div
                 class="
                   sdg sdg-seventeen
@@ -484,7 +484,9 @@ export default {
 
   methods: {},
 
-  computed: {},
+  computed: {
+    
+  }
 };
 </script>
 
