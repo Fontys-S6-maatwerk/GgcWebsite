@@ -5,10 +5,13 @@ import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import AddSolution from '../views/AddSolution.vue'
 import CKEditor from '@ckeditor/ckeditor5-vue2'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
 Vue.use(CKEditor)
+Vue.use(VueAxios, axios)
 
 const routes: Array<RouteConfig> = [
   {

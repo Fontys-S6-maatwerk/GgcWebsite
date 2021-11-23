@@ -184,7 +184,7 @@
                   placeholder="Naam van de creatie"
                   value=""
                   required=""
-                  v-model="creationName"
+                  v-model="bodySolution.creationName"
                 />
               </div>
             </div>
@@ -223,7 +223,7 @@
                     rows="4"
                     maxlength="300"
                     placeholder="Korte beschrijving van de creatie"
-                    v-model="creationDesc"
+                    v-model="bodySolution.creationDesc"
                   ></textarea>
 
                   <p class="shortDescription-count-wrapper small-text">
@@ -675,7 +675,6 @@
                 <div id="app">
                   <ckeditor
                     :editor="editor"
-                    v-model="creationContent"
                   ></ckeditor>
                 </div>
               </div>
@@ -683,7 +682,11 @@
 
             <div class="flex align-center space-between">
               <div class="flex align-center">
-                <button class="add-textfield bold-text mr-50" type="submit">
+                <button
+                  class="add-textfield bold-text mr-50"
+                  type="submit"
+                  @click="create()"
+                >
                   <svg
                     class="svg-inline--fa fa-upload fa-w-16 input-icon mr-10"
                     aria-hidden="true"
@@ -765,12 +768,14 @@ export default {
   },
 
   data: () => ({
+    url: "http://localhost:5011/Solutions/article",
     editor: CKEditor,
-    creationName: "",
-    creationDesc: "",
-    SDGs: "", // radioboxes
-    creationContent: "",
-
+    bodySolution: {
+      creationName: "",
+      creationDesc: "",
+      // creationContent: "",
+      // SDGs: [], // radioboxes
+    }
   }),
 
   mounted() {},
@@ -779,6 +784,16 @@ export default {
     alert: function () {
       alert();
     },
+    create: function () {
+      this.axios
+        .post("http://localhost:5011/Solutions/article")
+        .then((response) => {
+          console.log(response.status);
+        })
+        .catch((error) => {
+          console.log(error.response);
+        });
+    },
   },
 
   computed: {},
@@ -786,8 +801,7 @@ export default {
 </script>
 
 <style>
-  .ck-editor__editable {
-    min-height: 300px;
-  }
-
+.ck-editor__editable {
+  min-height: 300px;
+}
 </style>
