@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Solutions from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import SolutionsPerSDG from '../views/SolutionsPerSDG.vue'
+import Search from '../views/Search.vue'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -28,6 +29,11 @@ const routes: Array<RouteConfig> = [
     path: '/sdgs/:id/:name',
     name: 'SolutionPerSDG',
     component: SolutionsPerSDG
+  },
+  {
+    path: '/search/',
+    name: 'Search',
+    component: Search
   },
   {
     path: '/about',

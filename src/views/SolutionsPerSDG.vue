@@ -9,7 +9,7 @@
           </div>
         </div>
       </div>
-      <SDGfilter />
+      <SDGfilter :sdgfilter="false" :solutions="solution" />
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@
 <script lang="ts">
 /* eslint-disable */
 import { Component, Vue } from "vue-property-decorator";
+import MockSolutions from '@/data/Solutions'
 import SDGInfo from "@/components/SDGs/SDGinfo.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 import BreadcrumbItem from "@/domain/BreadcrumbItem";
@@ -30,6 +31,7 @@ import SDGfilter from "@/components/SDGs/SDGfilter.vue";
   },
   data() {
     return {
+      solution:MockSolutions,
       breadcrumbItems: [
         new BreadcrumbItem("SDGs", "/sdgs/"),
         new BreadcrumbItem(this.$route.params.name, null),
