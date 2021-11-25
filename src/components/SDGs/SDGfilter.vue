@@ -8,7 +8,7 @@
       <div class="content">
         <div class="row mt-40">
           <div class="col-7">
-            <h2 class="mb-20">Waar ben je naar opzoek?{{checkedSDGS}}</h2>
+            <h2 class="mb-20">Waar ben je naar opzoek?</h2>
             <form id="search-form" class="mb-50">
               <div class="input-wrapper">
                 <input

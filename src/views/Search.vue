@@ -19,7 +19,6 @@ import MockSolutions from '@/data/Solutions'
 import { Component, Vue } from "vue-property-decorator";
 import SearchWelcome from "@/components/SDGs/SearchWelcome.vue";
 import SDGfilter from "@/components/SDGs/SDGfilter.vue";
-import Solution from '@/domain/Solution';
 
 @Component({
   components: {
