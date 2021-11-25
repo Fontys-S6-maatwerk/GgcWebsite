@@ -137,603 +137,557 @@
               er wel op dat je maar één oplossing tegelijk kunt opslaan.
             </p>
           </div>
-
-          <form
-            id="add-content"
-            method="POST"
-            enctype="multipart/form-data"
-            action=""
-          >
-            <input
-              id="action"
-              type="hidden"
-              name="action"
-              value="add-content"
-            />
-            <input type="hidden" name="id" value="173" />
-            <input type="hidden" name="type" value="2" />
-
-            <div class="input-card input-wrapper mb-50">
-              <div
-                class="
-                  input-card-title
-                  background-highlight
-                  border-radius-top
-                  text-white
-                  px-30
-                  py-15
-                "
-              >
-                Creatie naam
-              </div>
-
-              <div
-                class="
-                  input-card-content
-                  background-white
-                  border-radius-bottom
-                  p-30
-                "
-              >
-                <span class="bold-text"> Hoe wil je de creatie noemen? </span>
-
-                <input
-                  id="input-title"
-                  class="input p-15 full-width input-title mt-15"
-                  name="title"
-                  placeholder="Naam van de creatie"
-                  value=""
-                  required=""
-                  v-model="bodySolution.creationName"
-                />
-              </div>
+          <div class="input-card input-wrapper mb-50">
+            <div
+              class="
+                input-card-title
+                background-highlight
+                border-radius-top
+                text-white
+                px-30
+                py-15
+              "
+            >
+              Creatie naam
             </div>
 
-            <div class="input-card input-wrapper mb-50">
-              <div
-                class="
-                  input-card-title
-                  background-highlight
-                  border-radius-top
-                  text-white
-                  px-30
-                  py-15
-                "
-              >
-                Creatie beschrijving
-              </div>
+            <div
+              class="
+                input-card-content
+                background-white
+                border-radius-bottom
+                p-30
+              "
+            >
+              <span class="bold-text"> Hoe wil je de creatie noemen? </span>
 
-              <div
-                class="
-                  input-card-content
-                  background-white
-                  border-radius-bottom
-                  p-30
-                "
-              >
-                <span class="bold-text">
-                  Geef de creatie een korte beschrijving (max. 300)
-                </span>
+              <input
+                id="input-title"
+                class="input p-15 full-width input-title mt-15"
+                name="title"
+                placeholder="Naam van de creatie"
+                value=""
+                required=""
+                v-model="solution.name"
+              />
+            </div>
+          </div>
 
-                <div class="shortDescription-wrapper flex flex-col">
-                  <textarea
-                    id="input-short-description"
-                    class="input mt-15 p-20 input-short-description"
-                    name="shortDescription"
-                    rows="4"
-                    maxlength="300"
-                    placeholder="Korte beschrijving van de creatie"
-                    v-model="bodySolution.creationDesc"
-                  ></textarea>
-
-                  <p class="shortDescription-count-wrapper small-text">
-                    (<span class="shortDescription-count">0</span> / 300)
-                  </p>
-                </div>
-              </div>
+          <div class="input-card input-wrapper mb-50">
+            <div
+              class="
+                input-card-title
+                background-highlight
+                border-radius-top
+                text-white
+                px-30
+                py-15
+              "
+            >
+              Creatie beschrijving
             </div>
 
-            <div class="input-card input-wrapper mb-50">
-              <div
-                class="
-                  input-card-title
-                  background-highlight
-                  border-radius-top
-                  text-white
-                  px-30
-                  py-15
-                "
-              >
-                SDG's
-              </div>
+            <div
+              class="
+                input-card-content
+                background-white
+                border-radius-bottom
+                p-30
+              "
+            >
+              <span class="bold-text">
+                Geef de creatie een korte beschrijving (max. 300)
+              </span>
 
-              <div
-                class="
-                  input-card-content
-                  background-white
-                  border-radius-bottom
-                  p-30
-                "
-              >
-                <span class="bold-text">
-                  Welke SDG('s) sluit(en) aan bij deze creatie? (max. 2)
-                </span>
+              <div class="shortDescription-wrapper flex flex-col">
+                <textarea
+                  id="input-short-description"
+                  class="input mt-15 p-20 input-short-description"
+                  name="shortDescription"
+                  rows="4"
+                  maxlength="300"
+                  placeholder="Korte beschrijving van de creatie"
+                  v-model="solution.desc"
+                ></textarea>
 
-                <div class="row mt-20">
-                  <div class="col-lg-4 col-12 pb-10">
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">1.</span>
-                          <span>Geen armoede</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="1"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">2.</span>
-                          <span>Geen honger</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="2"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">3.</span>
-                          <span>Goede gezondheid en welzijn</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="3"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">4.</span>
-                          <span>Kwaliteits onderwijs</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="4"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">5.</span>
-                          <span>Gendergelijkheid</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="5"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">6.</span>
-                          <span>Schoon water en sanitair</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="6"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-12 pb-10">
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">7.</span>
-                          <span>Betaalbare en duurzame energie</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="7"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">8.</span>
-                          <span>Waardig werk en economische groei</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="8"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">9.</span>
-                          <span>Industrie, innovatie en infrastructuur</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="9"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">10.</span>
-                          <span>Ongelijkheid verminderen</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="10"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">11.</span>
-                          <span>Duurzame steden en gemeenschappen</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="11"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">12.</span>
-                          <span>Verantwoorde consumptie en productie</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="12"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-12 pb-10">
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">13.</span>
-                          <span>Klimaatactie</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="13"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">14.</span>
-                          <span>Leven in het water</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="14"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">15.</span>
-                          <span>Leven op het land</span>
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="15"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">16.</span>
-                          <span
-                            >Vrede, justitie en sterke publieke diensten</span
-                          >
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="16"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-
-                    <div class="flex flex-row pb-10" style="min-height: 4rem">
-                      <label class="checkbox-wrapper">
-                        <div class="flex">
-                          <span class="mr-10">17.</span>
-                          <span
-                            >Partnerschap om doelstellingen te bereiken</span
-                          >
-                        </div>
-
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          name="sdgs[]"
-                          value="17"
-                        />
-                        <span class="checkbox"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
+                <p class="shortDescription-count-wrapper small-text">
+                  (<span class="shortDescription-count">0</span> / 300)
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="input-card input-wrapper mb-50">
-              <div
-                class="
-                  input-card-title
-                  background-highlight
-                  border-radius-top
-                  text-white
-                  px-30
-                  py-15
-                "
-              >
-                Header afbeelding
-              </div>
+          <div class="input-card input-wrapper mb-50">
+            <div
+              class="
+                input-card-title
+                background-highlight
+                border-radius-top
+                text-white
+                px-30
+                py-15
+              "
+            >
+              SDG's
+            </div>
 
-              <div
-                class="
-                  input-card-content
-                  background-white
-                  border-radius-bottom
-                  p-30
-                "
-              >
-                <div class="flex">
-                  <div class="text-center mr-30">
-                    <div class="content-img border-radius mb-5">
-                      <img
-                        class="preview-img border-radius display-none"
-                        src="#"
+            <div
+              class="
+                input-card-content
+                background-white
+                border-radius-bottom
+                p-30
+              "
+            >
+              <span class="bold-text">
+                Welke SDG('s) sluit(en) aan bij deze creatie? (max. 2)
+              </span>
+
+              <div class="row mt-20">
+                <div class="col-lg-4 col-12 pb-10">
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">1.</span>
+                        <span>Geen armoede</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="1"
                       />
-                      <span class="preview-text small-text text-gray"
-                        >Geen foto</span
-                      >
-                    </div>
-
-                    <span class="delete-img link display-none" data-id="173"
-                      >Delete</span
-                    >
+                      <span class="checkbox"></span>
+                    </label>
                   </div>
 
-                  <div>
-                    <p class="bold-text">
-                      Welke foto wil je gebruiken om je creatie weer te geven?
-                      (Niet verplicht)
-                    </p>
-                    <p class="small-text text-gray mb-20">
-                      Geldige bestandstypen zijn: jpg, jpeg, png
-                    </p>
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">2.</span>
+                        <span>Geen honger</span>
+                      </div>
 
-                    <input
-                      class="content-img-input inputfile mt-20"
-                      id="header-image"
-                      name="header-image"
-                      accept=".jpg,.jpeg,.png"
-                      type="file"
-                    />
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="2"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
 
-                    <label for="header-image" class="content-img-label">
-                      <svg
-                        class="svg-inline--fa fa-images fa-w-18 mr-10"
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="images"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                        data-fa-i2svg=""
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"
-                        ></path></svg
-                      ><!-- <i class="fas fa-images mr-10"></i> -->
-                      <span class="output">Upload een afbeelding</span>
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">3.</span>
+                        <span>Goede gezondheid en welzijn</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="3"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">4.</span>
+                        <span>Kwaliteits onderwijs</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="4"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">5.</span>
+                        <span>Gendergelijkheid</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="5"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">6.</span>
+                        <span>Schoon water en sanitair</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="6"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-12 pb-10">
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">7.</span>
+                        <span>Betaalbare en duurzame energie</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="7"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">8.</span>
+                        <span>Waardig werk en economische groei</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="8"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">9.</span>
+                        <span>Industrie, innovatie en infrastructuur</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="9"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">10.</span>
+                        <span>Ongelijkheid verminderen</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="10"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">11.</span>
+                        <span>Duurzame steden en gemeenschappen</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="11"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">12.</span>
+                        <span>Verantwoorde consumptie en productie</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="12"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-12 pb-10">
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">13.</span>
+                        <span>Klimaatactie</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="13"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">14.</span>
+                        <span>Leven in het water</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="14"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">15.</span>
+                        <span>Leven op het land</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="15"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">16.</span>
+                        <span>Vrede, justitie en sterke publieke diensten</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="16"
+                      />
+                      <span class="checkbox"></span>
+                    </label>
+                  </div>
+
+                  <div class="flex flex-row pb-10" style="min-height: 4rem">
+                    <label class="checkbox-wrapper">
+                      <div class="flex">
+                        <span class="mr-10">17.</span>
+                        <span>Partnerschap om doelstellingen te bereiken</span>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        class="sdg-checkbox"
+                        name="sdgs[]"
+                        value="17"
+                      />
+                      <span class="checkbox"></span>
                     </label>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="input-card input-wrapper mb-50">
-              <div
-                class="
-                  input-card-title
-                  background-highlight
-                  border-radius-top
-                  text-white
-                  px-30
-                  py-15
-                "
-              >
-                Inhoud van de creatie
-              </div>
+          <div class="input-card input-wrapper mb-50">
+            <div
+              class="
+                input-card-title
+                background-highlight
+                border-radius-top
+                text-white
+                px-30
+                py-15
+              "
+            >
+              Header afbeelding
+            </div>
 
-              <div
-                class="
-                  input-card-content
-                  background-white
-                  border-radius-bottom
-                  p-30
-                "
-              >
-                <p class="bold-text mb-20">
-                  Hier kan de inhoud ingevoerd worden
-                </p>
+            <div
+              class="
+                input-card-content
+                background-white
+                border-radius-bottom
+                p-30
+              "
+            >
+              <div class="flex">
+                <div class="text-center mr-30">
+                  <div class="content-img border-radius mb-5">
+                    <img
+                      class="preview-img border-radius display-none"
+                      src="#"
+                    />
+                    <span class="preview-text small-text text-gray"
+                      >Geen foto</span
+                    >
+                  </div>
 
-                <textarea
-                  id="input-content"
-                  class="textarea input input-content full-width mt-20 p-20"
-                  name="content"
-                  style="display: none"
-                ></textarea>
-                <div id="app">
-                  <ckeditor
-                    :editor="editor"
-                  ></ckeditor>
+                  <span class="delete-img link display-none" data-id="173"
+                    >Delete</span
+                  >
+                </div>
+
+                <div>
+                  <p class="bold-text">
+                    Welke foto wil je gebruiken om je creatie weer te geven?
+                    (Niet verplicht)
+                  </p>
+                  <p class="small-text text-gray mb-20">
+                    Geldige bestandstypen zijn: jpg, jpeg, png
+                  </p>
+
+                  <input
+                    class="content-img-input inputfile mt-20"
+                    id="header-image"
+                    name="header-image"
+                    accept=".jpg,.jpeg,.png"
+                    type="file"
+                  />
+
+                  <label for="header-image" class="content-img-label">
+                    <svg
+                      class="svg-inline--fa fa-images fa-w-18 mr-10"
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="images"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                      data-fa-i2svg=""
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"
+                      ></path></svg
+                    ><!-- <i class="fas fa-images mr-10"></i> -->
+                    <span class="output">Upload een afbeelding</span>
+                  </label>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="flex align-center space-between">
-              <div class="flex align-center">
-                <button
-                  class="add-textfield bold-text mr-50"
-                  type="submit"
-                  @click="create()"
-                >
-                  <svg
-                    class="svg-inline--fa fa-upload fa-w-16 input-icon mr-10"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="upload"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-                    ></path></svg
-                  ><!-- <i class="fas fa-upload input-icon mr-10"></i> -->
-                  Publiceer de creatie
-                </button>
+          <div class="input-card input-wrapper mb-50">
+            <div
+              class="
+                input-card-title
+                background-highlight
+                border-radius-top
+                text-white
+                px-30
+                py-15
+              "
+            >
+              Inhoud van de creatie
+            </div>
 
-                <p class="save link">
-                  <svg
-                    class="svg-inline--fa fa-save fa-w-14 input-icon mr-10"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="save"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z"
-                    ></path></svg
-                  ><!-- <i class="fas fa-save input-icon mr-10"></i> -->
-                  Later verdergaan
-                </p>
+            <div
+              class="
+                input-card-content
+                background-white
+                border-radius-bottom
+                p-30
+              "
+            >
+              <p class="bold-text mb-20">Hier kan de inhoud ingevoerd worden</p>
+
+              <textarea
+                id="input-content"
+                class="textarea input input-content full-width mt-20 p-20"
+                name="content"
+                style="display: none"
+              ></textarea>
+              <div id="app">
+                <ckeditor
+                  :editor="editor"
+                  v-model="solution.content"
+                ></ckeditor>
               </div>
+            </div>
+          </div>
 
-              <p class="delete text-gray link" data-id="173">
+          <div class="flex align-center space-between">
+            <div class="flex align-center">
+              <button class="add-textfield bold-text mr-50" @click="create()">
                 <svg
-                  class="svg-inline--fa fa-trash-alt fa-w-14 mr-5"
+                  class="svg-inline--fa fa-upload fa-w-16 input-icon mr-10"
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
-                  data-icon="trash-alt"
+                  data-icon="upload"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  data-fa-i2svg=""
+                >
+                  <path
+                    fill="currentColor"
+                    d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                  ></path></svg
+                ><!-- <i class="fas fa-upload input-icon mr-10"></i> -->
+                Publiceer de creatie
+              </button>
+
+              <p class="save link">
+                <svg
+                  class="svg-inline--fa fa-save fa-w-14 input-icon mr-10"
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="save"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
@@ -741,13 +695,33 @@
                 >
                   <path
                     fill="currentColor"
-                    d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
+                    d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z"
                   ></path></svg
-                ><!-- <i class="fas fa-trash-alt mr-5"></i> -->
-                Verwijderen
+                ><!-- <i class="fas fa-save input-icon mr-10"></i> -->
+                Later verdergaan
               </p>
             </div>
-          </form>
+
+            <p class="delete text-gray link" data-id="173">
+              <svg
+                class="svg-inline--fa fa-trash-alt fa-w-14 mr-5"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="trash-alt"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                data-fa-i2svg=""
+              >
+                <path
+                  fill="currentColor"
+                  d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
+                ></path></svg
+              ><!-- <i class="fas fa-trash-alt mr-5"></i> -->
+              Verwijderen
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -760,6 +734,8 @@
 <script>
 /* eslint-disable */
 import CKEditor from "@ckeditor/ckeditor5-build-classic";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 export default {
   name: "Article",
@@ -770,12 +746,12 @@ export default {
   data: () => ({
     url: "http://localhost:5011/Solutions/article",
     editor: CKEditor,
-    bodySolution: {
-      creationName: "",
-      creationDesc: "",
-      // creationContent: "",
+    solution: {
+      name: "",
+      desc: "",
+      content: "",
       // SDGs: [], // radioboxes
-    }
+    },
   }),
 
   mounted() {},
@@ -785,10 +761,10 @@ export default {
       alert();
     },
     create: function () {
-      this.axios
-        .post("http://localhost:5011/Solutions/article")
+      axios
+        .post("http://localhost:5011/Solutions/article", this.solution)
         .then((response) => {
-          console.log(response.status);
+          console.log(response.data);
         })
         .catch((error) => {
           console.log(error.response);
