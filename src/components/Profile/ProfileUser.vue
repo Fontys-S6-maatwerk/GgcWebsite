@@ -143,7 +143,7 @@ import { Component, Vue } from 'vue-property-decorator'
     user: Object
   }
 })
-export default class UserProfile extends Vue {}
+export default class ProfileUser extends Vue {}
 </script>
 
 <style>

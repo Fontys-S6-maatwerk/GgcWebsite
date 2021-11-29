@@ -1,19 +1,22 @@
 <template>
     <div class="profile">
-        <UserProfile :user_id="user_id" :user="user"/>
+        <ProfileUser :user_id="user_id" :user="user"/>
         <ProfileContent :user="user"/>
+        <ProfileLinks :user_id="user_id" :user="user"/>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import UserProfile from '../components/Profile/UserProfile.vue'
+import ProfileUser from '../components/Profile/ProfileUser.vue'
 import ProfileContent from '../components/Profile/ProfileContent.vue'
+import ProfileLinks from '../components/Profile/ProfileLinks.vue'
 
 @Component({
   components: {
-    UserProfile,
-    ProfileContent
+    ProfileUser,
+    ProfileContent,
+    ProfileLinks
   },
   // example data needed for profile page
   data: () => ({
