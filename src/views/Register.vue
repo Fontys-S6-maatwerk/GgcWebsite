@@ -17,11 +17,23 @@
                                         <label class="mb-10 bold-text" for="firstname">Voornaam</label>
                                         <input v-model="user.firstname" v-validate="'required'" type="text" class="form-control input py-10 px-20" name="firstname" />
                                     </div>
+                                    <div
+                                      v-if="submitted && errors.has('firstname')"
+                                      class="alert-danger"
+                                    >
+                                      {{ errors.first("firstname") }}
+                                    </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="input-wrapper">
                                         <label class="mb-10 bold-text" for="lastName">Achternaam</label>
                                         <input v-model="user.lastname" v-validate="'required'" type="text" class="form-control input py-10 px-20" name="lastname" />
+                                    </div>
+                                    <div
+                                      v-if="submitted && errors.has('lastname')"
+                                      class="alert-danger"
+                                    >
+                                      {{ errors.first("lastname") }}
                                     </div>
                                 </div>
                             </div>
@@ -31,6 +43,12 @@
                                         <label class="mb-10 bold-text" for="email">Emailadres</label>
                                         <input v-model="user.email" v-validate="'required'" type="email" class="form-control input py-10 px-20" name="email" />
                                     </div>
+                                    <div
+                                      v-if="submitted && errors.has('email')"
+                                      class="alert-danger"
+                                    >
+                                      {{ errors.first("email") }}
+                                    </div>
                                 </div>
                             </div>
                             <div class="row mb-40">
@@ -38,6 +56,12 @@
                                     <div class="input-wrapper">
                                         <label class="mb-10 bold-text" for="password">Wachtwoord</label>
                                         <input v-model="user.password" v-validate="'required'" type="password" class="form-control input py-10 px-20" name="password" />
+                                    </div>
+                                    <div
+                                      v-if="submitted && errors.has('password')"
+                                      class="alert-danger"
+                                    >
+                                      {{ errors.first("password") }}
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -49,18 +73,13 @@
                             </div>
                             <div class="form-options mb-30">
                                 <label class="checkbox-wrapper mb-20">
-                                    Ja, ik wil de nieuwsbrief ontvangen
-                                    <input type="checkbox" id="newsletter" name="newsletter">
-                                    <span class="checkbox"></span>
-                                </label>
-                                <label class="checkbox-wrapper mb-20">
                                     Ik accepteer de algemene voorwaarden en de privacy policy
                                     <input type="checkbox" id="acceptTerms" name="acceptTerms">
                                     <span class="checkbox"></span>
                                 </label>
                             </div>
                             <div class="buttons">
-                                <button class="btn btn-primary" type="submit">Maak een account aan</button>
+                                <button class="btn btn-primary" type="submit">{{ $t('Register') }}</button>
                             </div>
                         </form>
                     </div>

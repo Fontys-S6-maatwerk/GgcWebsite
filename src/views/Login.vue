@@ -43,8 +43,8 @@
               <a href="/forgot-password/">Wachtwoord vergeten?</a>
             </div>
               <div class="buttons flex align-center">
-                <button class="btn btn-primary mb-xs-20 mb-0 mr-xs-0 mr-30" type="submit">Inloggen</button>
-                <router-link class="bold-text" to="/register/">Account aanmaken</router-link>
+                <button class="btn btn-primary mb-xs-20 mb-0 mr-xs-0 mr-30" type="submit">{{ $t('Sign in') }}</button>
+                <router-link class="bold-text" to="/register/">{{ $t('Register') }}</router-link>
               </div>
           </form>
         </div>
