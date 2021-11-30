@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Solutions from '../views/Dashboard.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
 import SGDs from '../views/SDGs.vue'
 import { component } from 'vue/types/umd'
 
@@ -22,6 +24,16 @@ const routes: Array<RouteConfig> = [
     path: '/sdgs',
     name: 'SGGs',
     component: SGDs
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/about',
