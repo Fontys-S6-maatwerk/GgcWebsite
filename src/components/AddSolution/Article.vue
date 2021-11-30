@@ -207,7 +207,7 @@
                   rows="4"
                   maxlength="300"
                   placeholder="Korte beschrijving van de creatie"
-                  v-model="solution.desc"
+                  v-model="solution.description"
                 ></textarea>
 
                 <p class="shortDescription-count-wrapper small-text">
@@ -653,6 +653,7 @@
               <div id="app">
                 <ckeditor
                   :editor="editor"
+                  :config="editorConfig"
                   v-model="solution.content"
                 ></ckeditor>
               </div>
@@ -746,20 +747,23 @@ export default {
   data: () => ({
     url: "http://localhost:5011/Solutions/article",
     editor: CKEditor,
+    editorConfig: {
+      autoParagraph: 'false', //werkt niet
+      toolbar: [ 'bold', 'italic', '|', 'link' ],
+    },
     solution: {
       name: "",
-      desc: "",
+      description: "",
       content: "",
       // SDGs: [], // radioboxes
     },
   }),
 
-  mounted() {},
+  mounted() {
+
+  },
 
   methods: {
-    alert: function () {
-      alert();
-    },
     create: function () {
       axios
         .post("http://localhost:5011/Solutions/article", this.solution)
