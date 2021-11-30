@@ -10,18 +10,18 @@
                         <h1 class="h2 mb-10">Welkom bij Global Goals Community</h1>
                         <p class="mb-50 display-none-xs">Om oplossingen te kunnen plaatsen, reageren op oplossingen om een eigen profiel te creëren moet er ingelogd zijn met een account.</p>
                         <p class="mb-30">Heb je al een account? <router-link to="/login/" class="bold-text text-highlight">Login</router-link></p>
-                        <form id="register-form">
+                        <form name="form" @submit.prevent="handleRegister">
                             <div class="row mb-30">
                                 <div class="col-6">
                                     <div class="input-wrapper">
                                         <label class="mb-10 bold-text" for="firstname">Voornaam</label>
-                                        <input type="text" id="firstname" name="firstname" class="input py-10 px-20">
+                                        <input v-model="user.firstname" v-validate="'required'" type="text" class="form-control input py-10 px-20" name="firstname" />
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="input-wrapper">
                                         <label class="mb-10 bold-text" for="lastName">Achternaam</label>
-                                        <input type="text" id="lastname" name="lastname" class="input py-10 px-20">
+                                        <input v-model="user.lastname" v-validate="'required'" type="text" class="form-control input py-10 px-20" name="lastname" />
                                     </div>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 <div class="col-12">
                                     <div class="input-wrapper">
                                         <label class="mb-10 bold-text" for="email">Emailadres</label>
-                                        <input type="email" id="email" name="email" class="input py-10 px-20">
+                                        <input v-model="user.email" v-validate="'required'" type="email" class="form-control input py-10 px-20" name="email" />
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                                 <div class="col-6">
                                     <div class="input-wrapper">
                                         <label class="mb-10 bold-text" for="password">Wachtwoord</label>
-                                        <input type="password" id="password" name="password" class="input py-10 px-20">
+                                        <input v-model="user.password" v-validate="'required'" type="password" class="form-control input py-10 px-20" name="password" />
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -72,3 +72,50 @@
         </main>
     </body>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
+
+const Auth = namespace('Auth')
+
+@Component
+export default class Register extends Vue {
+  private user: any = { firstname: '', lastname: '', email: '', password: '' }
+  private submitted = false
+  private successful = false
+  private message = ''
+
+  @Auth.Getter
+  private isLoggedIn!: boolean
+
+  @Auth.Action
+  private register!: (data: any) => Promise<any>
+
+  mounted () {
+    if (this.isLoggedIn) {
+      this.$router.push('/profile')
+    }
+  }
+
+  handleRegister () {
+    console.log('Handle')
+    this.message = ''
+    this.submitted = true
+    this.$validator.validate().then((isValid) => {
+      if (isValid) {
+        this.register(this.user).then(
+          (data) => {
+            this.message = data.message
+            this.successful = true
+          },
+          (error) => {
+            this.message = error
+            this.successful = false
+          }
+        )
+      }
+    })
+  }
+}
+</script>
