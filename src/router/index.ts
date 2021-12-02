@@ -5,9 +5,12 @@ import Solutions from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import SolutionsPerSDG from '../views/SolutionsPerSDG.vue'
 import Search from '../views/Search.vue'
+import axios from 'axios';
+import VueAxios from 'vue-axios'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
+Vue.use(VueAxios, axios)
 
 const routes: Array<RouteConfig> = [
   {
