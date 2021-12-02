@@ -245,295 +245,27 @@
 
               <div class="row mt-20">
                 <div class="col-lg-4 col-12 pb-10">
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">1.</span>
-                        <span>Geen armoede</span>
-                      </div>
 
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="1"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
+                  <div v-for="SDG in SDGs" :key="SDG.id">
+                    <div class="flex flex-row pb-10" style="min-height: 4rem">
+                      <label class="checkbox-wrapper">
+                        <div class="flex">
+                          <span class="mr-10">{{ SDG.sdgNumber }}</span>
+                          <span
+                            >{{ SDG.name }}</span
+                          >
 
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">2.</span>
-                        <span>Geen honger</span>
-                      </div>
+                        <input
+                          type="checkbox"
+                          class="sdg-checkbox"
+                          v-model="solution.selectedSDGs"
+                          :value="SDG.id"
+                        />
+                        <span class="checkbox"></span>
+                        </div>
 
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="2"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">3.</span>
-                        <span>Goede gezondheid en welzijn</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="3"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">4.</span>
-                        <span>Kwaliteits onderwijs</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="4"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">5.</span>
-                        <span>Gendergelijkheid</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="5"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">6.</span>
-                        <span>Schoon water en sanitair</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="6"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-12 pb-10">
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">7.</span>
-                        <span>Betaalbare en duurzame energie</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="7"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">8.</span>
-                        <span>Waardig werk en economische groei</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="8"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">9.</span>
-                        <span>Industrie, innovatie en infrastructuur</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="9"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">10.</span>
-                        <span>Ongelijkheid verminderen</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="10"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">11.</span>
-                        <span>Duurzame steden en gemeenschappen</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="11"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">12.</span>
-                        <span>Verantwoorde consumptie en productie</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="12"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-12 pb-10">
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">13.</span>
-                        <span>Klimaatactie</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="13"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">14.</span>
-                        <span>Leven in het water</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="14"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">15.</span>
-                        <span>Leven op het land</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="15"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">16.</span>
-                        <span>Vrede, justitie en sterke publieke diensten</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="16"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
-                  </div>
-
-                  <div class="flex flex-row pb-10" style="min-height: 4rem">
-                    <label class="checkbox-wrapper">
-                      <div class="flex">
-                        <span class="mr-10">17.</span>
-                        <span>Partnerschap om doelstellingen te bereiken</span>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        class="sdg-checkbox"
-                        name="sdgs[]"
-                        value="17"
-                      />
-                      <span class="checkbox"></span>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -736,7 +468,6 @@
 /* eslint-disable */
 import CKEditor from "@ckeditor/ckeditor5-build-classic";
 import axios from "axios";
-import VueAxios from "vue-axios";
 
 export default {
   name: "Article",
@@ -745,29 +476,51 @@ export default {
   },
 
   data: () => ({
-    url: "http://localhost:5011/Solutions/article",
+    urlPost: "http://localhost:5011/Solutions/article",
+    urlGetSDGs: "http://localhost:5000/api/sdgs",
     editor: CKEditor,
     editorConfig: {
-      autoParagraph: 'false', //werkt niet
-      toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+      autoParagraph: "false", //werkt niet
+      toolbar: [
+        "heading",
+        "|",
+        "bold",
+        "italic",
+        "link",
+        "bulletedList",
+        "numberedList",
+        "blockQuote",
+      ],
     },
     solution: {
       name: "",
       description: "",
       content: "",
-      // SDGs: [], // radioboxes
+      selectedSDGs: []
     },
+    SDGs: [], // radioboxes
   }),
 
   mounted() {
-
+    this.fetchSDGs();
   },
 
   methods: {
     create: function () {
       axios
-        .post("http://localhost:5011/Solutions/article", this.solution)
+        .post(this.urlPost, this.solution)
         .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response);
+        });
+    },
+    fetchSDGs: function () {
+      axios
+        .get(this.urlGetSDGs)
+        .then((response) => {
+          this.SDGs = response.data;
           console.log(response.data);
         })
         .catch((error) => {
@@ -776,7 +529,11 @@ export default {
     },
   },
 
-  computed: {},
+  computed: {
+    getSDGs: function () {
+      return this.SDGs;
+    },
+  },
 };
 </script>
 
