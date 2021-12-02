@@ -749,7 +749,7 @@ export default {
     editor: CKEditor,
     editorConfig: {
       autoParagraph: 'false', //werkt niet
-      toolbar: [ 'bold', 'italic', '|', 'link' ],
+      toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
     },
     solution: {
       name: "",
