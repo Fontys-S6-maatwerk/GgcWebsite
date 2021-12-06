@@ -168,7 +168,7 @@
                 placeholder="Naam van de creatie"
                 value=""
                 required=""
-                v-model="solution.name"
+                v-model="article.name"
               />
             </div>
           </div>
@@ -207,7 +207,7 @@
                   rows="4"
                   maxlength="300"
                   placeholder="Korte beschrijving van de creatie"
-                  v-model="solution.description"
+                  v-model="article.description"
                 ></textarea>
 
                 <p class="shortDescription-count-wrapper small-text">
@@ -245,25 +245,21 @@
 
               <div class="row mt-20">
                 <div class="col-lg-4 col-12 pb-10">
-
                   <div v-for="SDG in SDGs" :key="SDG.id">
                     <div class="flex flex-row pb-10" style="min-height: 4rem">
                       <label class="checkbox-wrapper">
                         <div class="flex">
                           <span class="mr-10">{{ SDG.sdgNumber }}</span>
-                          <span
-                            >{{ SDG.name }}</span
-                          >
+                          <span>{{ SDG.name }}</span>
 
-                        <input
-                          type="checkbox"
-                          class="sdg-checkbox"
-                          v-model="solution.selectedSDGs"
-                          :value="SDG.id"
-                        />
-                        <span class="checkbox"></span>
+                          <input
+                            type="checkbox"
+                            class="sdg-checkbox"
+                            v-model="article.SDGIds"
+                            :value="SDG.id"
+                          />
+                          <span class="checkbox"></span>
                         </div>
-
                       </label>
                     </div>
                   </div>
@@ -386,7 +382,7 @@
                 <ckeditor
                   :editor="editor"
                   :config="editorConfig"
-                  v-model="solution.content"
+                  v-model="article.content"
                 ></ckeditor>
               </div>
             </div>
@@ -478,6 +474,8 @@ export default {
   data: () => ({
     urlPost: "http://localhost:5011/Solutions/article",
     urlGetSDGs: "http://localhost:5000/api/sdgs",
+    nextStep: "AfterCreationPage",
+    SDGs: [],
     editor: CKEditor,
     editorConfig: {
       autoParagraph: "false", //werkt niet
@@ -492,13 +490,12 @@ export default {
         "blockQuote",
       ],
     },
-    solution: {
+    article: {
       name: "",
       description: "",
       content: "",
-      selectedSDGs: []
+      SDGIds: [],
     },
-    SDGs: [], // radioboxes
   }),
 
   mounted() {
@@ -508,9 +505,12 @@ export default {
   methods: {
     create: function () {
       axios
-        .post(this.urlPost, this.solution)
+        .post(this.urlPost, this.article)
         .then((response) => {
           console.log(response.data);
+          if (response.status == 201) {
+            this.$emit("nextStep", this.nextStep);
+          }
         })
         .catch((error) => {
           console.log(error.response);
@@ -526,6 +526,9 @@ export default {
         .catch((error) => {
           console.log(error.response);
         });
+    },
+    changeStep(component) {
+      this.$emit("nextStep", component);
     },
   },
 

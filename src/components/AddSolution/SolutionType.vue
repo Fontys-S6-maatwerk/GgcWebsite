@@ -308,23 +308,18 @@ export default {
   name: "SolutionType",
 
   data: () => ({
-    articleComponent: "",
-    howToComponent: "",
-    videoComponent: "",
-    podcastComponent: "",
+    articleComponent: "Article",
+    howToComponent: "HowTo",
+    videoComponent: "Video",
+    podcastComponent: "Podcast",
   }),
 
   mounted() {
-    this.articleComponent = "Article";
-    this.howToComponent = "HowTo";
-    this.videoComponent = "Video";
-    this.podcastComponent = "Podcast";
   },
 
   methods: {
     changeStep(component) {
       this.$emit("nextStep", component);
-      console.log(component)
     },
   },
 
