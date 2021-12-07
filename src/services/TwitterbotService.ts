@@ -1,16 +1,17 @@
-import http from '@/services/http';
+import { TweetTimeDTO } from '@/dto/TweetTimeDTO'
+import http from '@/services/http'
+import axios from 'axios'
 
-export default class TwitterbotService{
+export default class TwitterbotService {
+  public async GetCurrentTime () {
+    const response = await http.get('http://localhost:5011/api/tweet/gettime')
+    return response.data
+  }
 
-    public async GetCurrentTime(){
-        const response = await http.get('/api/twitter/gettime');
-        return response.data;
-    }
-
-    public async SetCurrentTime(newTime: String){
-        console.log(newTime);
-        const response = await http.post('/api/twitter/adjusttime', newTime);
-        return response.data;
-    }
+  // const response = await http.post('https://localhost:5001/api/twitter/adjusttime', newTime)
+  public async SetCurrentTime (newTime: TweetTimeDTO) {
+    const response = await http.post('http://localhost:5011/api/tweet/adjusttime', newTime)
+    return response.data
+  }
 }
-export const twitterbotService =  new TwitterbotService();
+export const twitterbotService = new TwitterbotService()
