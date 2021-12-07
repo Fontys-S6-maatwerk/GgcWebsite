@@ -184,6 +184,42 @@
                 py-15
               "
             >
+              Weersextreem
+            </div>
+
+            <div
+              class="
+                input-card-content
+                background-white
+                border-radius-bottom
+                p-30
+              "
+            >
+              <span class="bold-text"> Welk weersextreem hoort hierbij? </span>
+
+              <input
+                id="input-title"
+                class="input p-15 full-width input-title mt-15"
+                name="title"
+                placeholder="Weersextreem"
+                value=""
+                required=""
+                v-model="article.weatherExtreme"
+              />
+            </div>
+          </div>
+
+          <div class="input-card input-wrapper mb-50">
+            <div
+              class="
+                input-card-title
+                background-highlight
+                border-radius-top
+                text-white
+                px-30
+                py-15
+              "
+            >
               Creatie beschrijving
             </div>
 
@@ -492,6 +528,7 @@ export default {
     },
     article: {
       name: "",
+      weatherExtreme: "",
       description: "",
       content: "",
       SDGIds: [],
@@ -539,9 +576,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.ck-editor__editable {
-  min-height: 300px;
-}
-</style>

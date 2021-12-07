@@ -9363,3 +9363,7 @@ ul.breadcrumb li+li:before {
 .contact-form svg {
     color: #02734A;
 }
+
+.ck-editor__editable {
+    min-height: 300px;
+}

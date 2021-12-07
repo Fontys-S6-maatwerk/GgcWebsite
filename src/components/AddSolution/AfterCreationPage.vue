@@ -134,14 +134,15 @@
                 background-size-cover background-position-center
                 mb-30
               "
-              style="
-                background-image: url('public/assets/content/header/standard-square.jpg');
-              "
             >
               <img
+                class="solution-image
+                background-size-cover background-position-center
+                mb-30"
                 data-scr="../../assets/content/header/standard-square.jpg"
                 alt="SDGs"
                 src="../../assets/content/header/standard-square.jpg"
+                style="width: 100%; height: 100%"
               />
             </div>
 
@@ -178,7 +179,6 @@
             </p>
 
             <a
-              href="https://globalgoalscommunity.eu/creation/175/175-test1/"
               id="share"
               class="btn btn-orange mb-15"
             >
