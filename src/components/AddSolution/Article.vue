@@ -281,7 +281,7 @@
 
               <div class="row mt-20">
                 <div class="col-lg-4 col-12 pb-10">
-                  <div v-for="SDG in SDGs" :key="SDG.id">
+                  <div v-for="SDG in getSDGs" :key="SDG.id">
                     <div class="flex flex-row pb-10" style="min-height: 4rem">
                       <label class="checkbox-wrapper">
                         <div class="flex">
@@ -546,7 +546,7 @@ export default {
         .then((response) => {
           console.log(response.data);
           if (response.status == 201) {
-            this.$emit("nextStep", this.nextStep);
+            this.changeStep(this.nextStep);
           }
         })
         .catch((error) => {
@@ -571,7 +571,9 @@ export default {
 
   computed: {
     getSDGs: function () {
-      return this.SDGs;
+      var sortedSDGs = this.SDGs;
+      sortedSDGs.sort((a, b) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
+      return sortedSDGs;
     },
   },
 };
