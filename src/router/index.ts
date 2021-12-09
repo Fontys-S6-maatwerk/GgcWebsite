@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import Solutions from '../views/Dashboard.vue'
+import Profile from '../views/Profile.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
+import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import SolutionsPerSDG from '../views/SolutionsPerSDG.vue'
 import Search from '../views/Search.vue'
+import AddSolution from '../views/AddSolution.vue'
+import CKEditor from '@ckeditor/ckeditor5-vue2'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
+Vue.use(CKEditor)
 Vue.use(VueAxios, axios)
 
 const routes: Array<RouteConfig> = [
@@ -21,7 +27,12 @@ const routes: Array<RouteConfig> = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Solutions
+    component: Dashboard
+  },
+  {
+    path: '/my-profile',
+    name: 'profile',
+    component: Profile
   },
   {
     path: '/sdgs/',
@@ -37,6 +48,21 @@ const routes: Array<RouteConfig> = [
     path: '/search/',
     name: 'Search',
     component: Search
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
+  {
+    path: '/add-content',
+    name: 'AddSolution',
+    component: AddSolution
   },
   {
     path: '/about',

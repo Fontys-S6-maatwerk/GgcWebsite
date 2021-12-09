@@ -24,9 +24,7 @@
 
                 <div class="menu-options menu-desktop flex flex-end align-center">
                     <LanguagePicker />
-
-                    <router-link to="/register/" class="btn-register bold-text ml-50 ml-xs-0 mb-xs-20">{{ $t('Register') }}</router-link>
-                    <router-link to="/login/" class="btn btn-secondary ml-30 ml-xs-0">{{ $t('Sign in') }}</router-link>
+                    <AuthButtons />
                 </div>
 
                 <span id="toggle" class="toggle" v-on:click="toggleMenu()">
@@ -48,8 +46,7 @@
                         {{ $t('Add solution') }}
                     </router-link>
                     <div class="flex flex-col-sm align-center">
-                        <router-link to="/register/" class="btn-register bold-text mr-sm-0 mr-20 mb-sm-20 mb-0">{{ $t('Register') }}</router-link>
-                        <router-link to="/login/" class="btn btn-secondary">{{ $t('Sign in') }}</router-link>
+                        <AuthButtons />
                     </div>
                 </div>
             </div>
@@ -61,13 +58,15 @@
 import { Vue } from 'vue-property-decorator'
 import MenuItem from './MenuItem.vue'
 import LanguagePicker from './LanguagePicker.vue'
+import AuthButtons from './AuthButtons.vue'
 import '@/assets/images/Logo_GGC.png'
 
 export default Vue.extend({
   name: 'Header',
   components: {
     MenuItem,
-    LanguagePicker
+    LanguagePicker,
+    AuthButtons
   },
   data () {
     return {
