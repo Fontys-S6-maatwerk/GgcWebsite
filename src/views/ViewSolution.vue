@@ -26,13 +26,13 @@
                 <div class="col-xl-12">
                   <span id="creation-id" style="display: none">31</span>
 
-                  <h2 class="mb-60">{{ solution.title }}</h2>
+                  <h2 class="mb-60">{{ solution.name }}</h2>
                 </div>
               </div>
 
               <div>
                 <span class="user-profile flex flex-start align-center">
-                  <router-link :to="'/profile/' + solution.author.slug + '/'">
+                  <router-link :to="'/profile/' + solution.authorId + '/'">
                     <div
                       class="
                         user-profile-image
@@ -47,7 +47,7 @@
                       :style="{
                         backgroundImage:
                           'url(\'https://globalgoalscommunity.eu/public/assets/profile/' +
-                          solution.author.id +
+                          solution.authorId +
                           '.png\')',
                       }"
                     ></div>
@@ -56,8 +56,8 @@
                   <div class="pl-10">
                     <span class="creator bold-text">
                       <a
-                        v-bind-href="'/profile/' + solution.author.name + '/'"
-                        >{{ solution.author.name }}</a
+                        v-bind-href="'/profile/' + solution.authorId + '/'"
+                        >{{ solution.authorId}}</a
                       >
 
                       <span
@@ -68,7 +68,7 @@
                       >
                     </span>
 
-                    <p class="date mt-5">{{ solution.date }}</p>
+                    <p class="date mt-5">{{ solution.uploadDate }}</p>
                   </div>
                 </span>
               </div>
@@ -113,8 +113,8 @@
               <div>
                 <div
                   class="creation-content text-justify pb-40 ck-content"
-                  v-html="solution.content"
-                  v-if="!!solution.content"
+                  v-html="solution.description"
+                  v-if="!!solution.description"
                 />
                 <div v-else-if="solution.steps">
                   <div><p>{{solution.introduction}}</p></div>
@@ -332,15 +332,11 @@ import solutions from "@/data/Solutions";
   },
   data() {
     return {
-      solution: solutions.filter(
-        (solution) => solution.id === parseInt(this.$route.params.id)
-      )[0],
+      solution: this.$route.params.solution,
       breadcrumbItems: [
         new BreadcrumbItem("Oplossing", "/search/"),
         new BreadcrumbItem(
-          solutions.filter(
-            (solution) => solution.id === parseInt(this.$route.params.id)
-          )[0].title,
+          this.$route.params.name,
           null
         ),
       ],

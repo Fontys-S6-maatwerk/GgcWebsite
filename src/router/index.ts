@@ -5,7 +5,7 @@ import Solutions from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import SolutionsPerSDG from '../views/SolutionsPerSDG.vue'
 import Search from '../views/Search.vue'
-import axios from 'axios';
+import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { component } from 'vue/types/umd'
 
@@ -47,8 +47,8 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/solution/:id/*',
-    name: 'View solution',
+    path: '/solution/:id/:name',
+    name: 'Viewsolution',
     component: () => import('../views/ViewSolution.vue')
   }
 ]

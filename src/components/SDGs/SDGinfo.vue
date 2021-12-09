@@ -10,7 +10,7 @@
 		<div class="content">
 			<div class="row">
 				<div class="col-md-10">
-					<h1 class="mb-md-20 mb-40">{{sdg.id}}. {{sdg.name}}</h1>
+					<h1 class="mb-md-20 mb-40">{{sdg.idsdg}}. {{sdg.name}}</h1>
 				</div>
 			</div>
 			<div class="row">

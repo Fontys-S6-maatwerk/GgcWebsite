@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 1, name: 'geen armoede', description: 'description'}, query:{}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[0].id, idsdg: sdgs[0].sdgNumber, name: sdgs[0].name, description: 'description'}, query:{}}">
               <div
                 class="
                   sdg sdg-one
@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id: 2, name: 'geen honger', description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[1].id, idsdg: sdgs[1].sdgNumber ,name: sdgs[1].name, description: 'description'}}">
               <div
                 class="
                   sdg sdg-two
@@ -467,25 +467,33 @@
         </div>
       </div>
     </div>
+  {{getSdgs}}
   </div>
 </template>
 
 <script>
 /* eslint-disable */
+import axios from 'axios'
 
 export default {
   data: () => ({
-    title: "",
+    sdgs:[],
   }),
 
   mounted() {
-    this.title = "Dashboard";
+    axios
+    .get('http://localhost:5011/Sdgs')
+    .then(r => {this.sdgs = r.data  })
   },
 
-  methods: {},
+  methods: {
+
+  },
 
   computed: {
-    
+    getSdgs: function () {
+      return this.sdgs;
+    },
   }
 };
 </script>

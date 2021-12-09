@@ -21,7 +21,7 @@
             </form>
             <h2 class="mb-40">Alle resultaten</h2>
             <div class="sort flex space-between mb-30">
-              <div>Er zijn {{}} resultaten</div>
+              <div>Er zijn {{solutions.length}} resultaten</div>
               <div class="sort-by flex align-center">
                 <div class="bold-text pr-30">Sorteren:</div>
                 <select

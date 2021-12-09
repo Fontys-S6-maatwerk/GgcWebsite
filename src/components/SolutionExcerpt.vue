@@ -1,6 +1,6 @@
 <template>
-  <div class="col-md-6 mb-20">
-    <router-link :to="url" class="card mb-lg-20">
+    <div class="col-md-6 mb-20">
+<router-link :to="{name:'Viewsolution', params:{solution:solution, name:solution.name}}" class="card mb-lg-20">
       <div
         class="card-image position-relative callout lazyloaded"
         :data-bgset="'public/assets/content/header/' + solution.id + '-header.png'"
@@ -9,14 +9,14 @@
       >
         <div
           class="card-user-image position-absolute callout lazyloaded"
-          :data-bgset="'/public/assets/profile/'+solution.author.id+'.png'"
-          :style="{backgroundImage: 'url(\'https://globalgoalscommunity.eu/public/assets/profile/'+solution.author.id+'.png\')'}"
+          :data-bgset="'/public/assets/profile/'+solution.authorId+'.png'"
+          :style="{backgroundImage: 'url(\'https://globalgoalscommunity.eu/public/assets/profile/'+solution.authorId+'.png\')'}"
         >
           <picture style="display: none">
             <source
-              :data-srcset="'/public/assets/profile/'+solution.author.id+'.png'"
+              :data-srcset="'/public/assets/profile/'+solution.authorId+'.png'"
               sizes="80px"
-              :srcset="'/public/assets/profile/'+solution.author.id+'.png'"
+              :srcset="'/public/assets/profile/'+solution.authorId+'.png'"
             />
             <img
               alt
@@ -44,19 +44,19 @@
       </div>
 
       <div class="card-info">
-        <h4>{{solution.title}}</h4>
+        <h4>{{solution.name}}</h4>
 
         <div class="date">
           <i class="fas fa-globe-europe"></i>
-          {{ moment(solution.date).format('ddd D MMMM YYYY hh:mm') }} uur
+          {{ moment(solution.uploadDate).format('ddd D MMMM YYYY hh:mm') }} uur
         </div>
 
         <div class="content-short">
-            {{exerpt}}
+            <p style="margin-left:0px;">{{exerpt}}</p>
         </div>
 
-        <div class="sdgs">
-          <sdg-badge v-for="(number, index) in solution.sdgs" v-bind:key="index" :number="number" :small="true" />
+        <div class="sdgs" v-for="sdgs in solution.sdGs" v-bind:key="sdgs.id">
+          <sdg-badge v-for="(sdgNumber, index) in sdgs.sdg" v-bind:key="index" :number="sdgNumber" :small="true" :name="name" />
         </div>
 
         <hr />
@@ -98,10 +98,10 @@ import moment from 'moment'
   },
   computed: {
     exerpt: function () {
-      return this.$props.solution.content.replace(/(<([^>]+)>)/ig, '').substring(0, 200)
+      return this.$props.solution.description.replace(/(<([^>]+)>)/ig, '').substring(0, 200)
     },
     url: function () {
-      return '/solution/' + this.$props.solution.id + '/' + (this.$props.solution.title.trim().replace(/[^a-z0-9]/gi, '-').toLowerCase()) + '/'
+      return '/solution/' + this.$props.solution.id + '/' + (this.$props.solution.name.trim().replace(/[^a-z0-9]/gi, '-').toLowerCase()) + '/'
     },
     headerImageUrl: function () {
       return 'public/assets/content/header/' + this.$props.solution.id + '-header.png'

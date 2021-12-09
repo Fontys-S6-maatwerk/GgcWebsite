@@ -9,8 +9,7 @@
           </div>
         </div>
       </div>
-      <SDGfilter :sdgfilter="false" :solutions="solution" />
-      {{ getSolutions }}
+      <SDGfilter :sdgfilter="false" :solutions="getSolutions" />
     </div>
   </div>
 </template>
@@ -34,6 +33,7 @@ import VueAxios from "vue-axios";
   },
   data() {
     return {
+      mock: MockSolutions,
       solution: [],
       breadcrumbItems: [
         new BreadcrumbItem("SDGs", "/sdgs/"),
@@ -44,8 +44,8 @@ import VueAxios from "vue-axios";
   },
   mounted() {
          axios
-         .get('localhost:5011/Solutions/sdg?id=db25e2d5-23bb-4ac0-27d9-08d9b3e9dd3b')
-         .then(response => {this.solution = response}).catch(e => console.log)
+         .get('http://localhost:5011/Solutions/sdg?id=' + this.$route.params.id)
+         .then(response => {this.solution = response.data}).catch(e => console.log)
       },
   computed: {
     getSolutions: function () {
