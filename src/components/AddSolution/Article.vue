@@ -509,7 +509,7 @@ export default {
 
   data: () => ({
     urlPost: "http://localhost:5011/Solutions/article",
-    urlGetSDGs: "http://localhost:5000/api/sdgs",
+    urlGetSDGs: "http://localhost:5011/sdgs",
     nextStep: "AfterCreationPage",
     SDGs: [],
     editor: CKEditor,
