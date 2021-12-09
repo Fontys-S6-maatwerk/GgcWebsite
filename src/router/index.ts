@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+import Solutions from '../views/Dashboard.vue'
+import Profile from '../views/Profile.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
 import AddSolution from '../views/AddSolution.vue'
@@ -25,9 +29,24 @@ const routes: Array<RouteConfig> = [
     component: Dashboard
   },
   {
+    path: '/my-profile',
+    name: 'profile',
+    component: Profile
+  },
+  {
     path: '/sdgs',
     name: 'SGGs',
     component: SGDs
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/add-content',
