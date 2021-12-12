@@ -126,6 +126,11 @@ import moment from "moment";
     moment,
   },
   computed: {
+    sortedSDGs: function () {
+      var sortedSDGs = this.$props.solution.description;
+      // sortedSDGs.sort((a, b) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
+      return sortedSDGs;
+    },
     exerpt: function () {
       return this.$props.solution.description
         .replace(/(<([^>]+)>)/gi, "")
@@ -150,7 +155,6 @@ import moment from "moment";
         "-header.png"
       );
     },
-    
   },
 })
 export default class SolutionExcerpt extends Vue {}

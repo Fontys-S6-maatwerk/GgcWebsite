@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[0].id, idsdg: sdgs[0].sdgNumber, name: sdgs[0].name, description: 'description'}, query:{}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[0].id, idsdg: getSortedSDGs[0].sdgNumber, name: getSortedSDGs[0].name, description: getSortedSDGs[0].description}, query:{}}">
               <div
                 class="
                   sdg sdg-one
@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[1].id, idsdg: sdgs[1].sdgNumber ,name: sdgs[1].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[1].id, idsdg: getSortedSDGs[1].sdgNumber, name: getSortedSDGs[1].name, description: getSortedSDGs[1].description}, query:{}}">
               <div
                 class="
                   sdg sdg-two
@@ -62,7 +62,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[2].id, idsdg: sdgs[2].sdgNumber, name: sdgs[2].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[2].id, idsdg: getSortedSDGs[2].sdgNumber, name: getSortedSDGs[2].name, description: getSortedSDGs[2].description}, query:{}}">
               <div
                 class="
                   sdg sdg-three
@@ -89,7 +89,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[3].id, idsdg: sdgs[3].sdgNumber, name: sdgs[3].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[3].id, idsdg: getSortedSDGs[3].sdgNumber, name: getSortedSDGs[3].name, description: getSortedSDGs[3].description}, query:{}}">
               <div
                 class="
                   sdg sdg-four
@@ -116,7 +116,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[4].id, idsdg: sdgs[4].sdgNumber, name: sdgs[4].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[4].id, idsdg: getSortedSDGs[4].sdgNumber, name: getSortedSDGs[4].name, description: getSortedSDGs[4].description}, query:{}}">
               <div
                 class="
                   sdg sdg-five
@@ -143,7 +143,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[5].id, idsdg: sdgs[5].sdgNumber, name: sdgs[5].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[5].id, idsdg: getSortedSDGs[5].sdgNumber, name: getSortedSDGs[5].name, description: getSortedSDGs[5].description}, query:{}}">
               <div
                 class="
                   sdg sdg-six
@@ -170,7 +170,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[6].id, idsdg: sdgs[6].sdgNumber, name: sdgs[6].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[6].id, idsdg: getSortedSDGs[6].sdgNumber, name: getSortedSDGs[6].name, description: getSortedSDGs[6].description}, query:{}}">
               <div
                 class="
                   sdg sdg-seven
@@ -197,7 +197,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[7].id, idsdg: sdgs[7].sdgNumber, name: sdgs[7].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[7].id, idsdg: getSortedSDGs[7].sdgNumber, name: getSortedSDGs[7].name, description: getSortedSDGs[7].description}, query:{}}">
               <div
                 class="
                   sdg sdg-eight
@@ -224,7 +224,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[8].id, idsdg: sdgs[8].sdgNumber, name: sdgs[8].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[8].id, idsdg: getSortedSDGs[8].sdgNumber, name: getSortedSDGs[8].name, description: getSortedSDGs[8].description}, query:{}}">
               <div
                 class="
                   sdg sdg-nine
@@ -251,7 +251,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG',params: { id:sdgs[9].id, idsdg: sdgs[9].sdgNumber, name: sdgs[9].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[9].id, idsdg: getSortedSDGs[9].sdgNumber, name: getSortedSDGs[9].name, description: getSortedSDGs[9].description}, query:{}}">
               <div
                 class="
                   sdg sdg-ten
@@ -278,7 +278,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[10].id, idsdg: sdgs[10].sdgNumber, name: sdgs[10].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[10].id, idsdg: getSortedSDGs[10].sdgNumber, name: getSortedSDGs[10].name, description: getSortedSDGs[10].description}, query:{}}">
               <div
                 class="
                   sdg sdg-eleven
@@ -305,7 +305,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[11].id, idsdg: sdgs[11].sdgNumber, name: sdgs[11].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[11].id, idsdg: getSortedSDGs[11].sdgNumber, name: getSortedSDGs[11].name, description: getSortedSDGs[11].description}, query:{}}">
               <div
                 class="
                   sdg sdg-twelve
@@ -332,7 +332,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[12].id, idsdg: sdgs[12].sdgNumber, name: sdgs[12].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[12].id, idsdg: getSortedSDGs[12].sdgNumber, name: getSortedSDGs[12].name, description: getSortedSDGs[12].description}, query:{}}">
               <div
                 class="
                   sdg sdg-thirteen
@@ -359,7 +359,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[13].id, idsdg: sdgs[13].sdgNumber, name: sdgs[13].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[13].id, idsdg: getSortedSDGs[13].sdgNumber, name: getSortedSDGs[13].name, description: getSortedSDGs[13].description}, query:{}}">
               <div
                 class="
                   sdg sdg-fourteen
@@ -386,7 +386,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[14].id, idsdg: sdgs[14].sdgNumber, name: sdgs[14].name, description: 'description'}}">>
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[14].id, idsdg: getSortedSDGs[14].sdgNumber, name: getSortedSDGs[14].name, description: getSortedSDGs[14].description}, query:{}}">>
               <div
                 class="
                   sdg sdg-fifteen
@@ -413,7 +413,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[15].id, idsdg: sdgs[15].sdgNumber, name: sdgs[15].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[15].id, idsdg: getSortedSDGs[15].sdgNumber, name: getSortedSDGs[15].name, description: getSortedSDGs[15].description}, query:{}}">
               <div
                 class="
                   sdg sdg-sixteen
@@ -440,7 +440,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="mb-lg-40 mb-md-20 mb-60">
-            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:sdgs[16].id, idsdg: sdgs[16].sdgNumber, name: sdgs[16].name, description: 'description'}}">
+            <router-link class="sdg-wrapper" :to="{name:'SolutionPerSDG' ,params: { id:getSortedSDGs[16].id, idsdg: getSortedSDGs[16].sdgNumber, name: getSortedSDGs[16].name, description: getSortedSDGs[16].description}, query:{}}">
               <div
                 class="
                   sdg sdg-seventeen
@@ -491,8 +491,10 @@ export default {
   },
 
   computed: {
-    getSdgs: function () {
-      return this.sdgs;
+    getSortedSDGs: function () {
+      var sortedSDGs = this.sdgs;
+      sortedSDGs.sort((a, b) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
+      return sortedSDGs;
     },
   }
 };
