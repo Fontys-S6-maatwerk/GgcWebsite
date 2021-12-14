@@ -514,7 +514,6 @@ export default {
     SDGs: [],
     editor: CKEditor,
     editorConfig: {
-      autoParagraph: "false", //werkt niet
       toolbar: [
         "heading",
         "|",
