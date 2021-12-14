@@ -13,10 +13,12 @@ import CKEditor from '@ckeditor/ckeditor5-vue2'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { component } from 'vue/types/umd'
+import Vuex from 'vuex'
 
 Vue.use(VueRouter)
 Vue.use(CKEditor)
 Vue.use(VueAxios, axios)
+Vue.use(Vuex)
 
 const routes: Array<RouteConfig> = [
   {

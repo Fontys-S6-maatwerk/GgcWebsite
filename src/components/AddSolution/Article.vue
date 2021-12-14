@@ -540,28 +540,22 @@ export default {
 
   methods: {
     create: function () {
-      axios
-        .post(this.urlPost, this.article)
-        .then((response) => {
-          console.log(response.data);
-          if (response.status == 201) {
-            this.changeStep(this.nextStep);
-          }
-        })
-        .catch((error) => {
-          console.log(error.response);
-        });
+      // axios
+      //   .post(this.urlPost, this.article)
+      //   .then((response) => {
+      //     console.log(response.data);
+      //     if (response.status == 201) {
+      //       this.changeStep(this.nextStep);
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.log(error.response);
+      //   });
+      this.$store.dispatch("createArticle", this.article) // if status = 201
+      .then(this.changeStep(this.nextStep))
     },
     fetchSDGs: function () {
-      axios
-        .get(this.urlGetSDGs)
-        .then((response) => {
-          this.SDGs = response.data;
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.log(error.response);
-        });
+      this.$store.dispatch("fetchSDGs");
     },
     changeStep(component) {
       this.$emit("nextStep", component);
@@ -570,9 +564,8 @@ export default {
 
   computed: {
     getSDGs: function () {
-      var sortedSDGs = this.SDGs;
-      sortedSDGs.sort((a, b) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
-      return sortedSDGs;
+      var SDGs = this.$store.getters.SDGs;
+      return SDGs.sort((a, b) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
     },
   },
 };
