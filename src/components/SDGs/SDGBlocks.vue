@@ -467,7 +467,6 @@
         </div>
       </div>
     </div>
-  {{getSdgs}}
   </div>
 </template>
 

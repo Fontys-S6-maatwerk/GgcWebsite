@@ -80,7 +80,7 @@
 
         <div class="sdgs" v-for="sdgs in sortedSDGs" v-bind:key="sdgs.id">
           <sdg-badge
-            v-for="(sdgNumber, index) in sdgs.sdg"
+            v-for="(sdgNumber, index) in sdgs"
             v-bind:key="index"
             :number="sdgNumber"
             :small="true"
@@ -127,8 +127,8 @@ import moment from "moment";
   },
   computed: {
     sortedSDGs: function () {
-      var sortedSDGs = this.$props.solution.description;
-      // sortedSDGs.sort((a, b) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
+      var sortedSDGs = this.$props.solution.sdGs;
+      sortedSDGs.sort((a : any, b: any) => (a.sdgNumber > b.sdgNumber ? 1 : -1));
       return sortedSDGs;
     },
     exerpt: function () {
