@@ -1,7 +1,7 @@
 <template>
   <router-link class="label" :to="'/sdgs/' + number + '/' + slug + '/'" :style="{backgroundColor: color, marginTop: small ? '0' : '2rem !important', marginRight: '1rem'}">
     {{ number }}.
-    {{ !small ? name : '' }}
+    {{ name }}
     </router-link>
 </template>
 
@@ -18,6 +18,10 @@ import Sdgs from '@/data/Sdgs'
     small: {
       type: Boolean,
       required: false
+    },
+    name:{
+      type: String,
+      required: true
     }
   },
   computed: {

@@ -1,3 +1,7 @@
+<script>
+/* eslint-disable */
+</script>
+
 <template>
   <div class="page-content pt-md-40 pt-60">
     <div class="page-navigation">
@@ -9,7 +13,10 @@
     </div>
 
     <div class="content-information py-60">
-      <img class="circles circles-content-left rotate-190" src="../assets/images/circles/circles.png" />
+      <img
+        class="circles circles-content-left rotate-190"
+        src="../assets/images/circles/circles.png"
+      />
 
       <div class="container">
         <div class="content">
@@ -19,41 +26,76 @@
                 <div class="col-xl-12">
                   <span id="creation-id" style="display: none">31</span>
 
-                  <h2 class="mb-60">{{ solution.title }}</h2>
+                  <h2 class="mb-60">{{ solution.name }}</h2>
                 </div>
               </div>
 
               <div>
                 <span class="user-profile flex flex-start align-center">
-                  <router-link :to="'/profile/' + solution.author.slug + '/'">
+                  <router-link :to="'/profile/' + solution.authorId + '/'">
                     <div
-                      class="user-profile-image circle-border-md background-position-center background-size-cover background-white flex align-center justify-center"
-                      :style="{backgroundImage: 'url(\'https://globalgoalscommunity.eu/public/assets/profile/' + solution.author.id + '.png\')'  }"
+                      class="
+                        user-profile-image
+                        circle-border-md
+                        background-position-center
+                        background-size-cover
+                        background-white
+                        flex
+                        align-center
+                        justify-center
+                      "
+                      :style="{
+                        backgroundImage:
+                          'url(\'https://globalgoalscommunity.eu/public/assets/profile/' +
+                          solution.authorId +
+                          '.png\')',
+                      }"
                     ></div>
                   </router-link>
 
                   <div class="pl-10">
                     <span class="creator bold-text">
-                      <a href="/profile/Diny-Ceelen/">Diny Ceelen</a>
+                      <a
+                        v-bind-href="'/profile/' + solution.authorId + '/'"
+                        >{{ solution.authorId}}</a
+                      >
 
-                      <span class="follow-button light-text ml-15 " data-user-id="16" data-redirect="/login/?r=creation">Volgen</span>
+                      <span
+                        class="follow-button light-text ml-15"
+                        data-user-id="16"
+                        data-redirect="/login/?r=creation"
+                        >Volgen</span
+                      >
                     </span>
 
-                    <p class="date mt-5">{{ solution.date }}</p>
+                    <p class="date mt-5">{{ solution.uploadDate }}</p>
                   </div>
                 </span>
               </div>
 
               <div class="sdg-container flex flex-col align-start mb-40">
-                <sdg-badge v-for="(number, index) in solution.sdgs" v-bind:key="index" :number="number" />
+                <sdg-badge
+                  v-for="(number, index) in solution.sdgs"
+                  v-bind:key="index"
+                  :number="number"
+                />
               </div>
 
               <div
-                class="creation-header-image border-radius box-shadow mb-sm-20 mb-40 callout lazyloaded"
+                class="
+                  creation-header-image
+                  border-radius
+                  box-shadow
+                  mb-sm-20 mb-40
+                  callout
+                  lazyloaded
+                "
                 data-bgset="/public/assets/content/header/31-header.jpg"
-                style="background-image: url(&quot;https://globalgoalscommunity.eu/public/assets/content/header/31-header.jpg&quot;);"
+                style="
+                  background-image: url('https://globalgoalscommunity.eu/public/assets/content/header/31-header.jpg');
+                "
               >
-                <picture style="display: none;">
+                <picture style="display: none">
                   <source
                     data-srcset="/public/assets/content/header/31-header.jpg"
                     sizes="721px"
@@ -68,8 +110,52 @@
                   />
                 </picture>
               </div>
+              <div>
+                <div
+                  class="creation-content text-justify pb-40 ck-content"
+                  v-html="solution.description"
+                  v-if="!!solution.description"
+                />
+                <div v-else-if="solution.steps">
+                  <div><p>{{solution.introduction}}</p></div>
+                  <div><p>{{solution.difficulty}}</p></div>
+                  <div
+                    v-for="(item, index) in solution.steps"
+                    :sol-id="index"
+                    :sol-name="item"
+                    :key="index"
+                  >
+                    <div class="creation-content text-justify pb-40 ck-content">
+                      <h2> Stap {{ index + 1}}.</h2>
+                      <p>{{ item }}</p>
+                    </div>
+                  </div>
+                  <h3>materials</h3>
+                  <div
+                    v-for="(item, index) in solution.materials"
+                    :sol-id="index"
+                    :sol-name="item"
+                    :key="index"
+                  >
+                    <div class="creation-content text-justify pb-40 ck-content">
 
-              <div class="creation-content text-justify pb-40 ck-content" v-html="solution.content" />
+                      <p>{{ item }}</p>
+                    </div>
+                  </div>
+                  <h3>Tools</h3>
+                  <div
+                    v-for="(item, index) in solution.tools  "
+                    :sol-id="index"
+                    :sol-name="item"
+                    :key="index"
+                  >
+                    <div class="creation-content text-justify pb-40 ck-content">
+ 
+                      <p>{{ item }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class="statistics flex">
                 <div class="statistic flex flex-row align-center pr-30">
@@ -160,11 +246,27 @@
 
               <div
                 id="share"
-                class="share-action inline-flex align-center background-offwhite border-radius p-10"
+                class="
+                  share-action
+                  inline-flex
+                  align-center
+                  background-offwhite
+                  border-radius
+                  p-10
+                "
               >
                 <div
-                  class="user-profile-image circle-border-md background-position-center background-size-cover background-white flex align-center justify-center"
-                  style="background-image: url('/public/assets/profile/44.jpg');"
+                  class="
+                    user-profile-image
+                    circle-border-md
+                    background-position-center
+                    background-size-cover
+                    background-white
+                    flex
+                    align-center
+                    justify-center
+                  "
+                  style="background-image: url('/public/assets/profile/44.jpg')"
                 ></div>
 
                 <span class="px-15 border-radius">
@@ -200,7 +302,9 @@
 
                         <p class="mb-30">Om te reageren moet u ingelogd zijn</p>
 
-                        <a href="/login/?r=creation" class="btn btn-primary">Inloggen</a>
+                        <a href="/login/?r=creation" class="btn btn-primary"
+                          >Inloggen</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -215,29 +319,29 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Breadcrumbs from '@/components/Breadcrumbs.vue'
-import BreadcrumbItem from '@/domain/BreadcrumbItem'
-import SdgBadge from '@/components/SdgBadge.vue'
-import solutions from '@/data/Solutions'
+import { Component, Vue } from "vue-property-decorator";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
+import BreadcrumbItem from "@/domain/BreadcrumbItem";
+import SdgBadge from "@/components/SdgBadge.vue";
+import solutions from "@/data/Solutions";
 
 @Component({
   components: {
     Breadcrumbs,
-    SdgBadge
+    SdgBadge,
   },
-  data () {
+  data() {
     return {
+      solution: this.$route.params.solution,
       breadcrumbItems: [
-        new BreadcrumbItem('Oplossing', '/search/'),
+        new BreadcrumbItem("Oplossing", "/search/"),
         new BreadcrumbItem(
-          'Sociale huurwoningen als woongemeenschap opzetten',
+          this.$route.params.name,
           null
-        )
+        ),
       ],
-      solution: solutions.filter(solution => solution.id === parseInt(this.$route.params.id))[0]
-    }
-  }
+    };
+  },
 })
 export default class ViewSolution extends Vue {}
 </script>

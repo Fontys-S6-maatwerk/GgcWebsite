@@ -3,17 +3,21 @@
 </script>
 
 <template>
-<div class="container py-xs-40 py-100">
-    <div class="content">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 mb-40">
-                <h2 class="mb-20">SDG Nederland</h2>
-                <p class="mb-20">Waar de doelen veel aandacht aan besteden is vrede en veiligheid, economische ontwikkeling en milieuthema’s. Het is van belang dat niemand achterblijft en dat iedereen in staat is om te bouwen aan een betere toekomst.</p>
-                <p class="mb-20">De SDG’s hebben betrekking op alle landen in de wereld en al zijn inwoners. De focus verschilt per land, maar overal is nog veel werk aan de winkel.</p>
-                <p class="mb-20">Er zijn al verschillende initiatieven en campagnes om een bijdrage te leveren aan het behalen van de SDG’s. Om een steentje hieraan bij te dragen is Global Goals Community ontwikkeld. Een plek om elkaar te inspireren, stimuleren en motiveren om aan de slag te gaan met het verwezenlijken van de SDG’s.</p>
-            </div>
-        </div>
-    </div>
+<div class="page-header flex align-center py-sm-0 py-lg-60 py-md-20 py-120">
+	<img class="circles circles-header-left" data-src="../../assets/images/circles/circles.png" alt src="../../assets/images/circles/circles.png"/>
+	<img class="circles circles-header-right rotate-190" data-src="../../assets/images/circles/circles.png" alt src="../../assets/images/circles/circles.png"/>
+	<div class="container py-sm-40">
+		<div class="content">
+			<div class="row">
+				<div class="col-md-10">
+					<h1 class="mb-md-20 mb-40">{{sdg.idsdg}}. {{sdg.name}}</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-6 col-lg-8"><p class="">{{sdg.description}}</p></div>
+			</div>
+		</div>
+	</div>
 </div>
 </template>
 
@@ -22,18 +26,7 @@
 
 export default {
 
-
-  data: () => ({
-    title: "",
-  }),
-
-  mounted() {
-    this.title = "Dashboard";
-  },
-
-  methods: {},
-
-  computed: {}
+props: ['sdg']
 };
 </script>
 

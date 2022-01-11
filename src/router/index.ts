@@ -1,14 +1,22 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import Solutions from '../views/Dashboard.vue'
 import Profile from '../views/Profile.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Dashboard from '../views/Dashboard.vue'
 import SGDs from '../views/SDGs.vue'
+import SolutionsPerSDG from '../views/SolutionsPerSDG.vue'
+import Search from '../views/Search.vue'
+import AddSolution from '../views/AddSolution.vue'
+import CKEditor from '@ckeditor/ckeditor5-vue2'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
+Vue.use(CKEditor)
+Vue.use(VueAxios, axios)
 
 const routes: Array<RouteConfig> = [
   {
@@ -19,7 +27,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: Solutions
+    component: Dashboard
   },
   {
     path: '/my-profile',
@@ -27,9 +35,19 @@ const routes: Array<RouteConfig> = [
     component: Profile
   },
   {
-    path: '/sdgs',
+    path: '/sdgs/',
     name: 'SGGs',
     component: SGDs
+  },
+  {
+    path: '/sdgs/:id/:name',
+    name: 'SolutionPerSDG',
+    component: SolutionsPerSDG
+  },
+  {
+    path: '/search/',
+    name: 'Search',
+    component: Search
   },
   {
     path: '/login',
@@ -42,6 +60,11 @@ const routes: Array<RouteConfig> = [
     component: Register
   },
   {
+    path: '/add-content',
+    name: 'AddSolution',
+    component: AddSolution
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -50,8 +73,8 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/solution/:id/*',
-    name: 'View solution',
+    path: '/solution/:id/:name',
+    name: 'Viewsolution',
     component: () => import('../views/ViewSolution.vue')
   }
 ]
